@@ -181,7 +181,7 @@ function openPageButtonThumbnails() {
 
 	$(".open-page").each(function(){
 		if (!($(this).hasClass('no-thumb'))){
-			var path = ($(this).attr('id')).replace("button-","dschwab/media/thumbs/thumb_");
+			var path = ($(this).attr('id')).replace("button-","media/thumbs/thumb_");
 			path += ".jpg"
 			var html = $(this).html();
 			html = '<img src="' + path + '"/><span>' + html + '</span>';
