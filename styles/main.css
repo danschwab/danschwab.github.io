@@ -198,9 +198,9 @@ input[type=button].square.open>span, button.square.open>span, a.button.square.op
 	position:fixed;
 	z-index:11;
 	top:60px;
-	background-image: url("../media/icons/closepage.png");}
+	background-image: url("../media/icons/close.png");}
 
-	.edge-button{
+.edge-button{
 	right:0;
 }
 #main-menu-open.open ~ .edge-button{
@@ -342,11 +342,11 @@ section>div>p {
 	background-image: url("../media/icons/open.png");
 }
 .open-page.square:after{
-	background-image: url("../media/icons/page.png");
+	background-image: url("../media/icons/open.png");
 }
 
 .open-page.open:after, .open-page.square.open:after{
-	background-image: url("../media/icons/closepage.png");
+	background-image: url("../media/icons/close.png");
 	opacity:.7;
 }
 .open-page:hover:after, .download:hover:after, .link:hover:after, .circle.link:hover:after, .navigation:hover:after, .lightbox.open:after{
