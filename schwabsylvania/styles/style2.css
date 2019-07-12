@@ -1,0 +1,281 @@
+
+	/****************************************/
+	/*										*/
+	/*	All content ©2015 Daniel Schwab		*/
+	/*										*/
+	/*	Colors:								*/
+	/*		brown: 			#740			*/
+	/*		orange: 		#f90			*/
+	/*		green: 			#cd3			*/
+	/*		yellow: 		#fd0			*/
+	/*		yellow light:	#fe8			*/
+	/*										*/
+	/****************************************/
+
+
+body {
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin: 0;
+	padding: 0 2em;
+	
+	background-color: #740;
+	background-image: url("http://www.slate.com/content/dam/slate/blogs/business_insider/2015/10/08/a_new_england_company_will_ship_fall_leaves_for_20/131054895-the-morning-light-illuminates-autumn-leaves-that-have.jpg.CROP.promo-xlarge2.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	
+	font: 12pt arial, sans-sarif;
+	
+	overflow: hidden;
+	
+	transition: padding .75s;
+}
+
+div {
+	position: relative;
+	top:0;
+	left:0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+div#all {
+	width: 100%;
+	max-width:1200px;
+	margin:auto;
+	height: 100%;
+	overflow: hidden;
+	
+	background-image: url("http://forestry.ky.gov/Kentuckysstateforests/PublishingImages/TygartsStateForest.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+/* sidebar */
+
+div#sidebar {
+	height: 100%;
+	position:absolute;
+	top:-2em;
+	left:-2em;
+	margin-left: 2em;
+	margin-top: 2em;
+	width: 33.3334%;
+	z-index: 1000;
+	background-color: #cd3;
+	
+	transition: width .75s, height .75s, top .75s, left .75s;
+}
+
+div#sidebar div {
+	height: 33.3334%;
+	overflow: hidden;
+}
+
+/* page style */
+
+div#page {
+	position: absolute;
+	left: 33.3334%;
+	width: 66.6665%;
+	height: 100%;
+	overflow-y: auto;
+	
+	transition: width .75s, left .75s;
+}
+
+/* header */
+
+header {
+	height: 100%;
+	overflow: hidden;
+}
+header div {
+      width: 100%;
+      height: 33.3334%;
+      text-align: center;
+}
+
+header p {
+	padding: .8em;
+}
+
+/* nav */
+
+nav {
+	position: relative;
+	width: 100%;
+	height: 33.3334%;
+	margin: 0;
+	z-index: 1100;
+}
+nav ul{
+	list-style: none;
+	width: 100%;
+	margin:0;
+	padding: 0;
+}
+nav ul li a{
+	position: relative;
+	display:block;
+	height:80%;
+	text-align: right;
+	background-color:#fd0;
+	text-decoration:none;
+	color:#740;
+	padding: .5em 1em .5em 0;
+	border-right: 0em solid #fd0;
+	margin: 1em 0;
+	background-color:#fd0;
+	transition: border .5s, background-color .2s;
+}
+nav ul li a:hover{
+	border-right: 2em solid #f90;
+	background-color:#fe8;
+}
+nav ul li a:focus{
+	background-color:#fe8;
+}
+
+
+/* main */
+
+main {
+	margin-top: 10em;
+	padding-bottom: 3em;
+	background-color: #fff;
+	border-radius: 0 0 3em 3em;
+}
+
+footer {
+	text-align: center;
+	color: #fff;
+}
+
+
+/* elements */
+
+img {
+	width:100%;
+}
+
+p {
+	margin: 0;
+	padding: 2em 0;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+
+.box{
+	position: relative;
+	width: 100%;		/* desired width */
+}
+.box:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+.boxcontent{
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.bottom {
+	border-radius: 0 0 3em 3em;
+}
+
+.textcentered:before {
+	height:
+}
+
+.centered {
+	width:100%;
+	height:33.3334%;
+	display: flex;
+	align-items: center;
+}
+.centered  span{
+	margin: 0 auto;
+}
+
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+    width: 1em;
+} /* this targets the default scrollbar (compulsory) */
+
+::-webkit-scrollbar-track {
+    background-color: #740;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #cd3;
+	border-top: .25em solid #fe8;
+	border-bottom: .25em solid #f90;
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+    background-color: #fd0;
+	border-top: .25em solid #fe8;
+	border-bottom: .25em solid #f90;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+    background-color: #740;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+
+
+@media (max-width: 1100px) {
+	
+	body {
+		padding: 0;
+	}
+}
+
+
+@media (max-width: 900px) {
+	
+	div#page {
+		width: 100%;
+		left: 0;
+	}
+	
+	div#sidebar {
+		left:-50%;
+		width: 50%;
+	}
+	div#sidebar:hover {
+		left: -2em;
+	}
+}
+
+
+@media (max-width: 500px) {
+	
+	div#sidebar {
+		top:-50%;
+		left:-100%;
+		height: 50%;
+		width: 100%;
+	}
+	div#sidebar:hover {
+		top: -2em;
+	}
+}

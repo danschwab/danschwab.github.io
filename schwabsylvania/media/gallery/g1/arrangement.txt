@@ -1,0 +1,24 @@
+title=We Like Pictures
+text=Arma virumque cano, Troiae qui primus ab oris Italiam, fato profugus, Laviniaque venit itora, multum ille et terris iactatus et alto vi superum saevae memorem Iunonis ob iram; multa quoque et bello passus, dum conderet urbem, inferretque deos Latio, genus unde Latinum, Albanique patres, atque altae moenia Romae. Iunonis ob iram; multa quoque et bello passus, dum conderet urbem, inferretque deos Latio, genus unde Latinum, Albanique patres, atque altae moenia Romae.
+
+image=background6.jpg
+caption=This is a picture. It is about what we want it to be about.
+
+image=background5.jpg
+caption=This is a picture. It is about what we want it to be about.
+
+image=background4.jpg
+
+image=background3.jpg
+caption=This is a picture. It is about what we want it to be about.
+
+
+title=Next Thing
+text=Iunonis ob iram; multa quoque et bello passus, dum conderet urbem, inferretque deos Latio, genus unde Latinum, Albanique patres, atque altae moenia Romae. Iunonis ob iram; multa quoque et bello passus, dum conderet urbem, inferretque deos Latio, genus unde Latinum, Albanique patres, atque altae moenia Romae.
+
+
+video=video.mp4
+caption=Latio, genus unde Latinum, Albanique patres, atque altae moenia Romae. Iunonis ob iram.
+
+video=video.mp4
+caption=Iunonis ob iram; multa quoque et bello passus, dum conderet urbem, inferretque deos Latio, genus unde Latinum, Albanique patres, atque altae moenia Romae. Iunonis ob iram; multa quoque et bello passus.

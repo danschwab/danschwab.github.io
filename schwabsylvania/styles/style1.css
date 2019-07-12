@@ -1,0 +1,173 @@
+
+	/****************************************/
+	/*										*/
+	/*	All content ©2015 Daniel Schwab		*/
+	/*										*/
+	/*	Colors:								*/
+	/*		brown: 			#740			*/
+	/*		orange: 		#f90			*/
+	/*		green: 			#cd3			*/
+	/*		yellow: 		#fd0			*/
+	/*		yellow light:	#fe8			*/
+	/*										*/
+	/****************************************/
+
+
+body {
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin: 0;
+	padding: 0;
+	
+	background-image: url("http://forestry.ky.gov/Kentuckysstateforests/PublishingImages/TygartsStateForest.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-color: #cd3;
+	
+	font: 12pt arial, sans-sarif;
+	
+	
+}
+
+div {
+	position: relative;
+	top:0;
+	left:0;
+	margin: 0;
+	padding: 0;
+}
+
+div#all {
+	width: 100%;
+	height: 100%;
+}
+
+/* sidebar */
+
+div#sidebar {
+	float: left;
+	width: 25%;
+	height: 100%;
+}
+div#sidebar div {
+	background-color:#fd0;
+}
+
+/* page style */
+
+div#page {
+	float: right;
+	width: 75%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+/* header */
+
+header {
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+header div {
+	height: 33.334%;
+	overflow: hidden;
+}
+header span {
+	height: 50%;
+    margin-top: 10em;
+	background-color: #cd3;
+}
+header p {
+	padding: .8em;
+}
+
+/* nav */
+
+nav {
+	position: relative;
+	width: 100%;
+}
+nav ul{
+	list-style: none;
+	width: 100%;
+	margin:0;
+	padding:0;
+}
+nav ul li a{
+	text-align: right;
+	text-decoration:none;
+	color:#740;
+	display:block;
+	padding: 1em;
+	margin: .5em 0;
+	background-color:#fd0;
+	transition: padding .5s, background-color .2s;
+}
+nav ul li a:hover{
+	padding-right: 4em;
+}
+nav ul li a:active{
+	background-color:#fe8;
+}
+
+
+/* main */
+
+main {
+	margin-top: 10em;
+	padding-bottom: 3em;
+	background-color: #fff;
+	border-radius: 0 0 3em 3em;
+}
+
+footer {
+	text-align: center;
+	color: #fff;
+}
+
+
+/* elements */
+
+img {
+	width:100%;
+}
+
+p {
+	margin: 0;
+	padding: 2em 0;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+
+.box{
+	position: relative;
+	width: 100%;		/* desired width */
+}
+.box:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+.boxcontent{
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.bottom {
+	border-radius: 0 0 3em 3em;
+}
+
+

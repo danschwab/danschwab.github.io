@@ -1,0 +1,568 @@
+ 
+	/****************************************/
+	/*										*/
+	/*	All content ©2015 Daniel Schwab		*/
+	/*										*/
+	/*	Colors:								*/
+	/*		old								*/
+	/*		brown: 			#740			*/
+	/*		orange: 		#f90			*/
+	/*		green: 			#cd3			*/
+	/*		yellow: 		#fd0			*/
+	/*		yellow light:	#fe8			*/
+	/*										*/
+	/*		new								*/
+	/*		back / darken: 	#496730			*/
+	/*						73,103,48		*/
+	/*		front: 			#60843D			*/
+	/*						96,132,61		*/
+	/*		highlight: 		#BCBC32			*/
+	/*						188,188,50		*/
+	/*		text-light: 	#E5E13E			*/
+	/*						229,229,62		*/
+	/*		text-dark:		#2E3A21			*/
+	/*						47,58,33		*/
+	/*		darker			#1F2616			*/
+	/*		main back:		#91C45C			*/
+	/*						145,196,92		*/
+	/*										*/
+	/****************************************/
+
+	
+body {
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin: 0;
+	padding: 0 2em;
+	
+	background-color: #2E3A21;
+	background-image: url("../media/background6.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	
+	font: 12pt arial, sans-sarif;
+	
+	overflow: hidden;
+	
+	transition: padding .5s;
+}
+
+div#all {
+	width: 100%;
+	max-width:1200px;
+	margin:auto;
+	height: 100%;
+	overflow: hidden;
+	
+
+}
+
+
+
+/* basic elements */
+
+div {
+	position: relative;
+	top:0;
+	left:0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+	transition: font .5s;
+	color: #1F2616;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	transition: font .5s;
+}
+
+h1{
+	font: bold 24pt/1.5em Times, serif;
+}
+h2{
+	font: italic bold 18pt/1.5em Times, serif;
+}
+
+img {
+	width:100%;
+	height:auto;
+	padding:0;
+	margin:0;
+}
+
+
+
+/* sidebar */
+
+div#sidebar {
+	height: 100%;
+	position:absolute;
+	top:-2em;
+	left:-2em;
+	margin-left: 2em;
+	margin-top: 2em;
+	width: 30%;
+	z-index: 1000;
+	background-color: #496730;
+	
+	transition: width .5s, height .5s, top .5s, left .5s;
+}
+
+div#sidebar div {
+	height: 33.3334%;
+	overflow: hidden;
+	text-align:center;
+	color: #BCBC32;
+}
+
+div#sidebar span#openicon {
+	position:absolute	;
+	width:1em;
+	height:1em;
+	right:100%;
+	top:0;
+	font-size:2em;
+	color: #2E3A21;
+	cursor: pointer;
+	
+	transition: right .5s, color .2s;
+}
+div#sidebar span#openicon:hover {
+	color: #BCBC32;
+}
+div#sidebar span#openicon:active {
+	color: #E5E13E;
+}
+
+
+
+/* nav */
+
+nav {
+	
+	position: relative;
+	width: 100%;
+	height: 33.3334%;
+	margin: 0;
+	z-index: 1100;
+	
+	background-color:#60843D;
+	font-size: 12pt;
+}
+nav ul{
+	width: 100%;
+	height:100%;
+	margin:0;
+	padding: 0;
+	
+	list-style: none;
+}
+nav ul li{
+	height:20%;
+	width:100%;
+	display:flex;
+	align-items:center;
+}
+nav ul li a{
+	width:100%;
+	position: relative;
+	display:block;
+	padding: .5em 1em .5em 0;
+	border-right: 2em solid rgba(188,188,50,0);
+	margin: 0;
+	
+	text-align: right;
+	text-decoration:none;
+	color:#1F2616;
+	letter-spacing:2px;
+	background-color:rgba(73,103,48,.2);
+	
+	transition: border .2s, background-color .5s;
+}
+nav ul li a#current{
+	border-right: 2em solid rgba(188,188,50,.5);
+}
+nav ul li a:hover, nav ul li a#current:hover{
+	border-right: 2em solid #BCBC32;
+	background-color:rgba(73,103,48,.5);
+	z-index: 1200;
+}
+nav ul li a:active, nav ul li a#current:active{
+	border-right: 2em solid #E5E13E;
+	background-color:rgba(73,103,48,1);
+	z-index: 1200;
+}
+
+
+
+/* page */
+
+div#page {
+	position: absolute;
+	left: 30%;
+	width: 70%;
+	height: 100%;
+	overflow-y: auto;
+
+	transition: width .5s, left .5s;
+}
+
+/* header */
+
+header {
+	height: 100%;
+	overflow: hidden;
+	
+	background-image: url("../media/background3.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+header div {
+    width: 100%;
+    height: 33.3334%;
+    text-align: center;
+}
+
+#title {
+	color: #E5E13E;
+	background-color: rgba(73,103,48,0.6);
+}
+
+header h1{
+	font: italic bold 48pt/50px Times, serif;
+}
+header h2{
+	padding-top: 8px;
+	font: italic bold 32pt/40px Times, serif;
+}
+header p {
+	padding: 15px;
+	color: #E5E13E;
+}
+
+
+
+/* main */
+
+main {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+}
+
+main section{
+	position: relative;
+	padding: 1em;
+	border-bottom: 1em solid #496730;
+}
+main section.just{
+	padding:0;
+}
+
+main p{
+	text-align: justify;
+	padding: 1em;
+	line-height: 1.5em;
+}
+
+
+
+/* footer */
+
+footer {
+	height: 33.334%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #E5E13E;
+	background-color: rgba(96,132,61,0.5);
+	
+	background-image: url("../media/background4.jpg");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center;
+	background-size: cover;
+}
+
+footer div{
+	display:inline-block;
+}
+
+footer p {
+	color: #E5E13E;
+}
+
+/* classes */
+
+.arrow {
+	width:80px;
+	height:80px;
+	font-size: 50px;
+	line-height:80px;
+	border-radius:40px;
+	color: #E5E13E;
+	background-color: rgba(73,103,48,0.4);
+	cursor: pointer;
+	
+	transition: background-color .2s, color .2s;
+}
+.arrow:hover {
+	background-color: rgba(73,103,48,0.6);
+	color: #BCBC32;
+}
+.arrow:active {
+	background-color: rgba(73,103,48,.8);
+	color: #2E3A21;
+}
+
+
+
+.block{
+	position: relative;
+	height:auto;
+	float:left;
+	background-color: #eee;
+}
+.box{
+	position: relative;
+	height:auto;
+	float:left;
+	background-color: #eee;
+}
+.w25 {width: 25%;}
+.w33 {width: 33.333%;}
+.w50 {width: 50%;}
+.w100{width: 100%;}
+
+
+.box:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.boxend{
+	clear: both;
+}
+.block .boxcontent{
+	margin: .5em;
+	border: .5em solid #fff;
+	background-color: #eee;
+}
+.box .boxcontent{
+	position:  absolute;
+	top: .5em;
+	left: .5em;
+	bottom: .5em;
+	right: .5em;
+	border: .5em solid #fff;
+	background-color: #eee;
+	overflow:hidden;
+}
+.block .boxcontent img{
+	width:100%;
+}
+.box .boxcontent img{
+	width:auto;
+	height:100%;
+	padding:auto;
+}
+.block .boxcontent p{
+	border:.5em;
+	margin:0;
+	background-color: #fff;
+}
+.box .boxcontent p{
+	padding:0;
+	background-color: #fff;
+}
+
+
+.bottom {
+	border-radius: 0 0 3em 3em;
+}
+
+
+.centered {
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	flex-direction: column;
+}
+.centered  span{
+	margin: 0 auto;
+}
+
+
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+    width: 1em;
+} /* this targets the default scrollbar (compulsory) */
+
+::-webkit-scrollbar-track {
+    background-color: #496730;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #60843D;
+	
+	transition: border .2s;
+} /* this will style the thumb, ignoring the track */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #60843D;
+	border-top: .5em solid #BCBC32;
+	border-bottom: .5em solid #BCBC32;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #60843D;
+	border-top: .5em solid #E5E13E;
+	border-bottom: .5em solid #E5E13E;
+}
+ 
+::-webkit-scrollbar-button {
+    background-color: #60843D;
+	
+	transition: background-color .2s;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+::-webkit-scrollbar-button:hover {
+    background-color: #BCBC32;
+}
+::-webkit-scrollbar-button:active {
+    background-color: #E5E13E;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #496730;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+
+
+/* media queries */
+
+@media (min-width: 1101px) {
+
+	div#page {
+		width: 75%;
+		left: 25%;
+	}
+	
+	div#sidebar {
+		width: 25%;
+	}
+
+}
+
+@media (max-width: 1100px) {
+	
+	body {
+		padding: 0;
+	}
+	
+}
+
+
+@media (max-width: 900px) {
+	
+	div#page {
+		width: calc(100% - 2em);
+		left: 2em;
+	}
+	
+	div#sidebar {
+		left:-15em;
+		width: 15em;
+	}
+	div#sidebar.open {
+		left: -2em;
+	}
+	
+	div#sidebar span#openicon {
+		right:0;
+	}
+	
+}
+
+
+@media (max-width: 500px) {
+	
+	div#page {
+		width: 100%;
+		left: 0;
+	}
+	
+	div#sidebar {
+		top:-24em;
+		left:-100%;
+		height: 24em;
+		width: 100%;
+	}
+	div#sidebar.open {
+		top: -2em;
+	}
+	div#sidebar div{
+		height: 6em;
+	}
+	div#sidebar span#openicon {
+		top:auto;
+		bottom:0;	
+	}
+	
+	nav{
+		height: 12em;
+	}
+	
+	.box{
+		width: 100%;		/* desired width */
+	}
+	
+	/* resizing text */
+	
+	
+	div#sidebar h1{
+		font: bold 18pt/1.1em Times, serif;
+	}
+	div#sidebar h2{
+		font: italic bold 16pt/1.1em Times, serif;
+	}
+	
+	header h1{
+		font-size: 24pt;
+		line-height: 22px;
+	}
+	header h2{
+		font-size: 16pt;
+		line-height: 22px;
+	}
+	header p{
+		font-size: 10pt;
+		padding: 10px;
+	}
+	main p{
+		padding: 1em;
+	}
+	
+	
+	/* scroll bar */
+	
+	::-webkit-scrollbar {
+    width: .5em;
+	} /* this targets the default scrollbar (compulsory) */
+	
+}

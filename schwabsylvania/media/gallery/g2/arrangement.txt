@@ -1,0 +1,25 @@
+title=We Like Pictures
+caption=Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. Corrie eats worms. 
+
+
+
+image=background4.jpg
+
+image=background3.jpg
+
+text=Iunonis ob iram; multa quoque et bello passus, dum conderet urbem, inferretque deos Latio, genus unde Latinum, Albanique patres, atque altae moenia Romae. Iunonis ob iram; multa quoque et bello passus, dum conderet urbem, inferretque deos Latio, genus unde Latinum, Albanique patres, atque altae moenia Romae.
+
+
+image=background2.jpg
+caption=This is a picture. It is about what we want it to be about.
+
+image=background1.jpg
+caption=This is a picture. It is about what we want it to be about.
+
+title=We really Like Pictures
+
+image=background4.jpg
+caption=This is a picture. It is about what we want it to be about.
+
+image=background3.jpg
+caption=This is a picture. It is about what we want it to be about.
