@@ -10,7 +10,7 @@
 	<meta name="keywords" content="Daniel schwab, Schwab, dschwab, Portfolio, Resume, Design, Interdisciplinary, Industrial design, Product design, Web design, Ux design, User experience, User interface, Ux, Designer">
 	<meta name="author" content="Daniel Schwab">
 	<meta name="description" content="Interdisciplinary design portfolio and resume">
-	<title>Daniel Schwab | interdisciplinary design</title>
+	<title>Daniel Schwab</title>
 </head>
 <body>
 	
@@ -25,17 +25,16 @@
 	
 	
 		<!-- header -->
-		<header id="header">
+		<header id="header"><div>
 			<img src="media/header.png" />
-		</header>
+		</div></header>
 		
 		<!-- main -->
 		<main id="main">
 			<section id="section-navigation">
-				<button onclick="scrollBody('#section-product-design',500);" class="navigation circle" style="--accent-color:#ff8000;color:#ff8000;">product design</button>
-				<button onclick="scrollBody('#section-web-design',500);" class="navigation circle" style="--accent-color:#0097ff;color:#0097ff;">web design</button>
-				<button onclick="scrollBody('#section-play',500);" class="navigation circle" style="--accent-color:#4ab500;color:#4ab500;">play</button>
-				<button onclick="scrollBody('#section-about',500);" class="navigation circle" style="--accent-color:#00b7a5;color:#00b7a5;">about</button>
+				<button onclick="scrollBody('#section-product-design',500);" class="nav-tab" style="--accent-color:#f26923;">Design</button>
+				<button onclick="scrollBody('#section-about',500);" class="nav-tab" style="--accent-color:#078C7B;">About</button>
+				<a href="media/documents/SchwabDesignResume_December2019.pdf" target="_tab" class="nav-tab" style="--accent-color:#BE1E2D;line-height:50px;">Resume</a>
 			</section>
 			
 			
@@ -44,12 +43,12 @@
 			
 			
 			
-			<section id="section-product-design" style="background-color:#e06a00;">
-				<h1><span>product design</span></h1>
+			<section id="section-product-design" style="background-color:#f26923;">
+				<h1><span>Design</span></h1>
 				<div>
-					<button class="open-page square" id="button-capstone">capstone: classroom furniture</button>
-					<button class="open-page square" id="button-stepstool">furniture design: step stool</button>
-					<button class="open-page square" id="button-metaproject">Metaproject @ ICFF: exhibit design</span></button>
+					<button class="open-page square" id="button-capstone">Senior capstone: Classroom Furniture System</button>
+					<button class="open-page square" id="button-stepstool">Furniture Design: Internship Step Stool</button>
+					<button class="open-page square" id="button-metaproject">Exhibit Design: Senior Year Internship</button>
 				</div>
 				<div class="page" id="page-capstone">
 					<div>
@@ -145,8 +144,8 @@
 					</div>
 				</div>
 				<div class="page" id="page-stepstool">
-					<div class="top-padding bottom-padding">
-						<h2>Internship Step Stool</h2>
+					<div class="bottom-padding">
+						<h2>Furniture Design: Internship Step Stool</h2>
 						<p>During summer '17 I worked for a furniture studio owned by an RIT adjunct professor, Byron Conn. During my time there, I designed
 						this elegant and simple step stool and took it from ideation to production. The two parts of the stepstool can be carried as a unit when pushed
 						together, but are completely disconnected when pulled apart. Since then, my mother has been using it as a multifunctional stool in her
@@ -154,7 +153,7 @@
 					</div>
 					<img data-src="media/stepstool/stepstool01.jpg" />
 					<img data-src="media/stepstool/stepstoolsketches.jpg" />
-					<div class="bottom-padding"><p>Will scan more of my ideation sketches soon...</p></div>
+					<div class="bottom-padding"><p></p></div>
 					<img class="half-width" data-src="media/stepstool/model1.jpg" />
 					<img class="half-width" data-src="media/stepstool/model2.jpg" />
 					<img data-src="media/stepstool/fullscalemodel.jpg" />
@@ -166,7 +165,7 @@
 					<img data-src="media/stepstool/stoolfinal2.jpg" />
 				</div>
 				<div class="page" id="page-metaproject">
-					<div><h2>Senior Year Exhibit Design Internship</h2>
+					<div><h2>Exhibit Design: Senior Year Internship</h2>
 					<p>During my final semester at RIT 
 					I interned part-time for Tim Prinzing at RES Exhibits in Rochester. After rapidly becoming
 					proficient in Autocad Inventor, I was connected with RIT department chair Josh Owen 
@@ -200,9 +199,9 @@
 				
 				
 				<div>
-					<button class="open-page square" id="button-swanfaucet">faucet design: swan faucet</button>
-					<button class="open-page square" id="button-fulcrum">fulcrum: lighting design</button>
-					<button class="open-page square" id="button-flossrefloss">hygiene design: floss refloss</button>
+					<button class="open-page square" id="button-fulcrum">Lighting Design: Fulcrum</button>
+					<button class="open-page square" id="button-flossrefloss">Hygene Design: Floss Refloss</button>
+					<button class="open-page square" id="button-castleblocks" type="button">Toy Design: Castle Blocks</button>
 				</div>
 				
 				<div class="page" id="page-flossrefloss">
@@ -224,26 +223,30 @@
 					<img data-src="media/fulcrum/fulcrum10.jpg" />
 					<img data-src="media/fulcrum/fulcrum11.jpg" />
 				</div>
-				<div class="page" id="page-swanfaucet">
-					<img data-src="media/faucet/faucet01.jpg" />
-					<img data-src="media/faucet/faucet02.jpg" />
-					<img data-src="media/faucet/faucet03.jpg" />
-					<img data-src="media/faucet/faucet04.jpg" />
-					<img data-src="media/faucet/faucet05.jpg" />
-					<img data-src="media/faucet/faucet06.jpg" />
+				<div class="page" id="page-castleblocks">
+					<div>
+						<h2>Toy Design: Castle Blocks</h2>
+						<p>Castleblocks is a project that my sister and I have been working on for several years. As children, we
+						always wished that we had a block set particularly designed to make castles, and now we have the opportunity
+						to create what we dreamed of. Currently, we only have a paper version completed to test viability.</p>
+					</div>
+					<img data-src="media/castleblocks/castleblocks01.jpg" />
+					<img data-src="media/castleblocks/castleblocks02.jpg" />
+					<img data-src="media/castleblocks/castleblocks03.jpg" />
 				</div>
 				
 				
 				
 				
 				<div>
-					<button class="open-page square" id="button-kmc">apparel design: kangaroo mother care</button>
-					<button class="open-page square" id="button-renders">CAD</button>
-					<button class="open-page square" id="button-sketches">sketches</button>
+					<button class="open-page square" id="button-kmc">Apparel Design: Kangaroo Mother Care</button>
+					<button class="open-page square" id="button-renders">Rendering with various mediums</button>
+					<button class="open-page square" id="button-art" type="button">Fine art and photos for fun</button>
 				</div>
 				
 				
 				<div class="page" id="page-kmc">
+					<div><h2>Apparel Design: Kangaroo Mother Care</h2></div>
 					<div class="slideshow" id="slideshow-kmc">
 						<img data-src="media/kangaroomothercare/kmc1.jpg" />
 						<img data-src="media/kangaroomothercare/kmc2.jpg" />
@@ -252,28 +255,11 @@
 					</div>
 				</div>
 				<div class="page" id="page-renders">
-					<div><h2>renders, models, and drawings</h2></div>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="SprayBottle.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="carseat02.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="carseat01.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="carseat00.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="carseat03.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="kimcam-1.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="kimcam-2.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_assembly.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_front_1.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_front_2.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_back.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_button.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_focus.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_lens.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_clicker.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="faucet01.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="faucet02.png" /></button>
-					<button class="lightbox square"><img data-src="media/renders/" data-file="faucet03.png" /></button>
-				</div>
-				<div class="page" id="page-sketches">
-					<div><h2>sketches</h2></div>
+					
+					<div>
+						<h2>Rendering with various mediums</h2>
+						<h2>Design sketches</h2>
+					</div>
 					<button class="lightbox square"><img data-src="media/sketches/" data-file="tminus18concept.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/sketches/" data-file="tminus18sketches.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/sketches/" data-file="fulcrum03.jpg" /></button>
@@ -290,76 +276,40 @@
 					<button class="lightbox square"><img data-src="media/sketches/" data-file="juicer09.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/sketches/" data-file="juicers05.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/sketches/" data-file="juicers06.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/sketches/" data-file="insects.jpg" /></button>
-				</div>
-				
-				
-			</section>
-			
-			
-			
-			<!-- WEB DESIGN SECTION -->
-			
-			
-			
-			<section id="section-web-design" style="background-color:#0074bc;">
-				<h1><span>web design</span></h1>
-				<div>
-					<a class="button link square" id="button-family" target="_tab" href="http://www.dschwabdesign.com/schwabsylvania/inprogress.html"><img src="media/thumbs/thumb_schwabsylvania.jpg"/><span>website: www.schwabsylvania.com</span></a>
-					<a class="button open-page square" id="button-petgram">website: PetGram</a>
-					<a class="button link square" id="button-aptus" target="_tab" href="http://www.aptuscontrols.com"><img src="media/thumbs/thumb_aptuscontrols.jpg"/><span>website: www.aptuscontrols.com</span></a>
-					<!--a class="open-page button square" id="button-blog">website: personal blog template</a-->
-				</div>
-				<div class="page" id="page-petgram">
-					<div>
-						<h2>Unused web design for ieSimplified client</h2>
-						<p>While working for ieSimplified, an opportunity arose to design a website for a new client who was selling gift packages for pets. 
-							Although the site was never completed, it was fun to design a shopping experience for pet owners. 
-							Currently the store and shopping cart pages are partially functional, allowing users to sort items, view item details, and add items to a cart.</p>
-						<a class="button link circle" target="_tab" href="http://s12.thewebsiteparkinglot.com/petgram"><img src="media/thumbs/thumb_petgram.jpg"/></a>
-					</div>
-				</div>
-				<!--div class="page" id="page-blog">
-					<div>
-						<h2>Wikepage based blog</h2>
-						<p>This project, completed in 2016 for a rapid online presence course, was built by modifying an existing php wiki system, Wikepage. I edited the php to allow for basic commenting and use lightbox to view images, and built a custom skin for the website.</p>
-						<a class="button link circle" target="_tab" href="https://people.rit.edu/drs8047/rop/wiki/index.php"><img src="media/thumbs/thumb_blog.jpg"/></a>
-					</div>
-				</div-->
-			</section>
-			
-			
-			
-			<!-- PLAY SECTION -->
-			
-			
-				
-			<section id="section-play" style="background-color:#429600;">
-				<h1><span>play</span></h1>
-				<div>
+					<button class="lightbox square"><img data-src="media/faucet/" data-file="faucet05.jpg" /></button>
 					
-					<button class="open-page square" id="button-castleblocks" type="button">castle block set</button>
-					<button class="open-page square" id="button-art" type="button">fine art for fun</button>
-					<button class="open-page square" id="button-photos" type="button">photography</button>
-				</div>
-				<div class="page" id="page-castleblocks">
-					<div>
-						<h2>Castle Blocks</h2>
-						<p>Castleblocks is a project that my sister and I have been working on for several years. As children, we
-						always wished that we had a block set particularly designed to make castles, and now we have the opportunity
-						to create what we dreamed of. Currently, we only have a paper version completed to test viability.</p>
-					</div>
-					<img data-src="media/castleblocks/castleblocks01.jpg" />
-					<img data-src="media/castleblocks/castleblocks02.jpg" />
-					<img data-src="media/castleblocks/castleblocks03.jpg" />
+					<div><h2>Digital renders</h2></div>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="SprayBottle.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="carseat02.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="carseat01.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="carseat00.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="carseat03.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="faucet01.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="faucet02.png" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="faucet03.png" /></button>
+					<button class="lightbox square"><img data-src="media/faucet/" data-file="faucet06.jpg" /></button>
+					
+					<div><h2>Camera CAD project</h2></div>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="kimcam-1.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="kimcam-2.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_assembly.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_front_1.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_front_2.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_back.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_button.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_focus.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_lens.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/renders/" data-file="camera_clicker.jpg" /></button>
 				</div>
 				<div class="page" id="page-art">
 					<div>
-						<h2>Art</h2>
+						<h2>Fine art and photos for fun</h2>
 						<p>Sometimes I just need to play, and I pick up a marker, a pen, or just some wire and begin to make something. These
 						are artifacts of an active mind applying itself to 2d and 3d mediums. Nobody paid me for these!</p>
+						<h2>Art</h2>
 					</div>
 					<button class="lightbox square"><img data-src="media/art/" data-file="2018-1-2_Allosaurus.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/sketches/" data-file="insects.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/art/" data-file="2015_Cascade.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/art/" data-file="2015_Glade.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/art/" data-file="2015_Vista.jpg" /></button>
@@ -372,14 +322,28 @@
 					<button class="lightbox square"><img data-src="media/art/" data-file="2015_Parthenon_Kindergarden.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/art/" data-file="2015_Parthenon_Pen.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/art/" data-file="2014_Crossroads.png" /></button>
-				</div>
-				<div class="page" id="page-photos">
+					<div>
+						<h2>Anno Domini</h2>
+						<p>A friend, Matthew Fox, asked me to help him illustrate a poem he is working on titled "Anno Domini". I will be uploading some of the progress images here.</p>
+					</div>
+					<button class="lightbox square"><img data-src="media/annodomini/" data-file="kneadingcosmos.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/annodomini/" data-file="kneadinghands.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/annodomini/" data-file="Stanza4.png" /></button>
 					<div>
 						<h2>Photography</h2>
-						<p>Sometimes, when I see a thing or a place which has some natural or designed beauty, I wish I could capture the feeling of joy that I have.
-						Capturing joy is difficult, but photography can at least remember the vision I saw and remind me of a piece of it later. Most of these photos
-						were taken during a photography class in the spring of 2017 when I had access to a high quality camera</p>
+						<p>I wish I could capture the feeling of joy that I have in the presence of beauty.
+						Capturing joy is difficult, but photography reminds me of a piece of it later. Most of these photos
+						were taken during a photography class in the spring of 2017 when I had access to a high quality DSLR camera.</p>
 					</div>
+					<!--button class="lightbox square"><img data-src="media/photos/" data-file="roof.jpg" /></button-->
+					<button class="lightbox square"><img data-src="media/photos/" data-file="bulb.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/photos/" data-file="pipeprofile.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/photos/" data-file="cactuspot.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/photos/" data-file="cheesechips.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/photos/" data-file="burritobowl.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/photos/" data-file="chairs.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/photos/" data-file="plantpot.jpg" /></button>
+					<button class="lightbox square"><img data-src="media/photos/" data-file="plantclose.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="Tulips3.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="cherryblossoms.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="floweringtree.jpg" /></button>
@@ -389,58 +353,23 @@
 					<button class="lightbox square"><img data-src="media/photos/" data-file="needles2.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="path2.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="needles.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="plants.jpg" /></button>
+					<!--button class="lightbox square"><img data-src="media/photos/" data-file="plants.jpg" /></button-->
 					<button class="lightbox square"><img data-src="media/photos/" data-file="meadow.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="plantclose.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="plantpot.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="tree.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="River2.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="water.jpg" /></button>
+					<!--button class="lightbox square"><img data-src="media/photos/" data-file="water.jpg" /></button-->
 					<button class="lightbox square"><img data-src="media/photos/" data-file="bridge.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="sunset1.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="sunset3.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="Mirror.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="roadtoroc.jpg" /></button>
+					<!--button class="lightbox square"><img data-src="media/photos/" data-file="Mirror.jpg" /></button-->
+					<!--button class="lightbox square"><img data-src="media/photos/" data-file="roadtoroc.jpg" /></button-->
 					<button class="lightbox square"><img data-src="media/photos/" data-file="gregboss.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="mingthrows.jpg" /></button>
 					<button class="lightbox square"><img data-src="media/photos/" data-file="Hub.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="Windows.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="chairs.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="cheesechips.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="burritobowl.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="roof.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="bulb.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="pipeprofile.jpg" /></button>
-					<button class="lightbox square"><img data-src="media/photos/" data-file="cactuspot.jpg" /></button>
+					<!--button class="lightbox square"><img data-src="media/photos/" data-file="Windows.jpg" /></button-->
 					<button class="lightbox square"><img data-src="media/photos/" data-file="Sentinel.jpg" /></button>
 				</div>
-				
-				<div>
-					<button class="open-page square" id="button-annodomini" type="button">illustration: Anno Domini</button>
-					<button class="open-page square" id="button-videos" type="button">film</button>
-				</div>
-				<div class="page" id="page-annodomini">
-					<div class="padding">
-						<h2>Anno Domini</h2>
-						<p>A friend, Matthew Fox, asked me to help him illustrate a poem he is working on titled "Anno Domini". I will be uploading some of the progress images here.</p>
-					</div>
-					<img class="padding" data-src="media/annodomini/kneadingcosmos.jpg" />
-					<img class="padding" data-src="media/annodomini/kneadinghands.jpg" />
-					<img class="padding" data-src="media/annodomini/Stanza4.png" />
-				</div>
-				<div class="page" id="page-videos">
-					<div class="padding">
-						<h2>Film</h2>
-						<p>I directed and produced <strong>The Bacon</strong> as the final project for a film course. It was fun to storyboard, film, 
-						and edit the footage together, and I have been finding opportunities to make super-short films ever since.</p>
-						<!--video controls>
-							<source src="/media/film/TheBacon.mp4" type="video/mp4">
-							<a class="button link circle" target="_tab" href="https://www.youtube.com/watch?v=qrlkwYe0mvw"><img src="media/thumbs/thumb_thebacon.jpg"/></a>
-						</video-->
-						<a class="button link square" target="_tab" href="https://www.youtube.com/watch?v=qrlkwYe0mvw"><img src="media/thumbs/thumb_thebacon.jpg"/><span>The Bacon</span></a>
-						<a class="button link square" target="_tab" href="https://www.youtube.com/watch?v=9M8-hW2q5qA"><img src="media/thumbs/thumb_newt.jpg"/><span>red-spotted newts</span></a>
-					</div>
-				</div>
+
 			</section>
 			
 			
@@ -449,8 +378,8 @@
 			
 			
 			
-			<section id="section-about" style="background-color:#00a898;">
-				<h1><span>about</span></h1>
+			<section id="section-about" style="background-color:#078C7B;">
+				<h1><span>About</span></h1>
 				<div>
 					
 					<p><strong>Hi, I'm Daniel Schwab.</strong> I love designing pretty much anything, but my formal education is 
@@ -463,17 +392,21 @@
 					<div class="buttonContainer">
 					<a class="button circle" id="button-danielschwab" style="cursor:default;"><img src="media/danielschwab.jpg" /></a>
 					<a class="button link circle" id="button-linkedin" style="--accent-color:#00b7a5;" target="_tab" href="https://www.linkedin.com/in/dschwabdesign/"><img src="media/thumbs/thumb_linkedin.png" /></a>
-					<a class="button open-page circle no-thumb" id="button-resume" style="--accent-color:#00b7a5;color:#00b4a2;">Resum&eacute;</a>
+					<!--a class="button open-page circle no-thumb" id="button-resume" style="--accent-color:#00b7a5;color:#00b4a2;">Resum&eacute;</a-->
 					</div>
 				</div>
-				<div class="page" id="page-resume">
+				<!--div class="page" id="page-resume">
 					<div style="background:transparent;">
 						<a class="button download circle" href="media/documents/SchwabDesignResume_August2019.pdf" download><img src="media/thumbs/thumb_resume.jpg"/></a>
 						<img class="shadow" data-src="media/documents/SchwabDesignResume_August2019.png" />
 					</div>
-				</div>
+				</div-->
 			</section>
-			
+			<section id="section-footernav">
+				<button onclick="scrollBody('#section-product-design',500);" class="nav-tab" style="--accent-color:#f26923;">Design</button>
+				<button onclick="scrollBody('#section-about',500);" class="nav-tab" style="--accent-color:#078C7B;">About</button>
+				<a href="media/documents/SchwabDesignResume_December2019.pdf" target="_tab" class="nav-tab" style="--accent-color:#BE1E2D;line-height:50px;">Resume</a>
+			</section>
 		</main>
 		
 		<!-- footer -->
@@ -489,33 +422,24 @@
 		</div></footer>
 	</div>
 		
-	<style>
-		<!-- This was a quick and easy way to get the dynamic colors I wanted without spending tons of time coding -->
-		#button-capstone, #page-capstone{--accent-color: rgb(255,128,0)}
-		#button-stepstool, #page-stepstool{--accent-color: rgb(243,127,32)}
-		#button-metaproject, #page-metaproject{--accent-color: rgb(0,0,0)}
-		#button-swanfaucet, #page-swanfaucet{--accent-color: rgb(249,201,0)}
-		#button-flossrefloss, #page-flossrefloss{--accent-color: rgb(151,217,234)}
-		#button-juicers, #page-juicers{--accent-color: rgb(170,191,84)}
-		#button-fulcrum, #page-fulcrum{--accent-color: rgb(243,127,32)}
-		#button-sketches, #page-sketches{--accent-color: rgb(255,128,0)}
-		#button-renders, #page-renders{--accent-color: rgb(255,128,0)}
-		
-		#button-family{--accent-color: rgb(0,151,255)}
-		#button-petgram, #page-petgram{--accent-color: rgb(0,151,255)}
-		#button-aptus{--accent-color: rgb(0,151,255)}
-		#button-blog, #page-blog{--accent-color: rgb(0,151,255)}
-		
-		#page-photos{--accent-color: rgb(0,0,0)} #button-photos{--accent-color: rgb(0,151,255)}
-		#page-art{--accent-color: rgb(0,0,0)} #button-art{--accent-color: rgb(74,181,0)}
-		#button-annodomini, #page-annodomini{--accent-color: rgb(173,0,50)}
-		#button-videos, #page-videos{--accent-color: rgb(0,0,0)}
-		#button-series, #page-series{--accent-color: rgb(219,125,77)}
-		#button-kmc, #page-kmc{--accent-color: rgb(84,187,174)}
-		
+	<!--style>
+		#page-capstone{--accent-color: rgb(255,128,0)}
+		#page-stepstool{--accent-color: rgb(243,127,32)}
+		#page-metaproject{--accent-color: rgb(0,0,0)}
+		#page-swanfaucet{--accent-color: rgb(249,201,0)}
+		#page-flossrefloss{--accent-color: rgb(151,217,234)}
+		#page-juicers{--accent-color: rgb(170,191,84)}
+		#page-fulcrum{--accent-color: rgb(243,127,32)}
+		#page-sketches{--accent-color: rgb(255,128,0)}
+		#page-renders{--accent-color: rgb(255,128,0)}
+		#page-art{--accent-color: rgb(0,0,0)} 
+		#page-annodomini{--accent-color: rgb(173,0,50)}
+		#page-videos{--accent-color: rgb(0,0,0)}
+		#page-series{--accent-color: rgb(219,125,77)}
+		#page-kmc{--accent-color: rgb(84,187,174)}
 		#page-danielschwab{--accent-color: rgb(0,183,165)}
 		#page-resume{--accent-color: rgb(0,183,165)}
-	</style>
+	</style-->
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="scripts/main.js"></script>
