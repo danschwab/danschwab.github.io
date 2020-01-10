@@ -50,8 +50,9 @@ $(document).ready(function(){
 		
 		$(".lightbox.open").removeClass('open');
 		//hideIcons("#portfolio-home span");
-		hideIcons("#page-top");
+		//hideIcons("#page-top");
 		hideIcons("#page-close");
+		
 		
 		//if ($("#portfolio-home").offset().top > $("main").offset().top + 64) $("#portfolio-home").removeClass("hidden");
 		//else $("#portfolio-home").addClass("hidden");
@@ -106,7 +107,17 @@ function hideIcons(icon) {
 		
 		//alert(pageTop + " : icon-" + iconLoc + " : " + pageBottom);
 		
-		if ((iconLoc < pageTop) || (iconLoc > pageBottom)) $(icon).addClass("hidden");
+		/*if ($(window).scrollTop() > pageBottom){
+			scrollBody($('.page.open'),1000);
+			$(".open-page").removeClass("open");
+			$(".page").removeClass("open");
+			setPage("#");
+		}*/
+		
+		
+		if ((iconLoc < pageTop) || (iconLoc > pageBottom)) {
+			$(icon).addClass("hidden");
+		}
 		else {
 			$(icon).removeClass("hidden");
 			$(".edge-button").css('--accent-color',$(".open-page.open").css('--accent-color')); 
@@ -114,7 +125,7 @@ function hideIcons(icon) {
 		}
 	}
 	else {
-		$(icon).addClass("hidden");
+		$(icon).addClass("hidden")
 	}
 	
 	

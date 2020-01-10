@@ -213,14 +213,16 @@ input[type=button].square.open, button.square.open, a.button.square.open {
 }
 input[type=button].square.open>span::after, button.square.open>span::after, a.button.square.open>span::after{
 	content:"\00D7";
+	text-align:center;
 	opacity:0;
-	font-size:60px;
+	font-size:80px;
 	position:absolute;
-	right:6px;
-	line-height:24px;
-	top:14px;
+	right:.2em;
+	line-height:100%;
+	top:0;
+	bottom:0;
 	transition: opacity .2s;
-	color:black;
+	color:#F26722;
 }
 input[type=button].square.open>span::after, button.square.open>span::after, a.button.square.open>span::after{
 	opacity:1;
@@ -237,7 +239,7 @@ input[type=button].square.open>span::after, button.square.open>span::after, a.bu
 #page-close{
 	position:fixed;
 	z-index:11;
-	top:60px;
+	top:0px;
 	background-image: url("../media/icons/close.png");}
 
 .edge-button{
@@ -264,21 +266,17 @@ input[type=button].square.open>span::after, button.square.open>span::after, a.bu
 	width:100%;
 	background-color:var(--white);
 	text-align:center;
-	background-image: url("../media/capstone/capstone04.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-}
-
-#header {
 	height:calc(100vh - 50px);
 	min-height:250px;
 }
-#footer {
-	height:200px;
-}
+#header{background-image: url("../media/capstone/capstone04.jpg");background-position:right center;}
+#footer{text-align:center;background-image: url("../media/castleblocks/castleblocks01.jpg");}
 
 #header>div, #footer>div {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   /*background: linear-gradient(to left, #8b86a3, #322e40);*/
@@ -294,10 +292,18 @@ input[type=button].square.open>span::after, button.square.open>span::after, a.bu
 	top: 50%;
 	transform: translateY(-50%);
 }
-#footer img {
-	height:65px;
+#footer>div{
+	padding-top:2em
+}
+#footer>div>div{
 	width:auto;
-	margin:30px;
+	display:inline-block;
+	text-align:left;
+}
+#footer img {
+	height:54px;
+	width:auto;
+	margin-right:20px;
 	display:inline-block;
 }
 #footer strong{
@@ -807,7 +813,7 @@ button.prev:hover, button.next:hover{
 		line-height:1em;
 	}
 	#footer img {
-		height:4.5em;
+		height:3em;
 	}
 }
 
@@ -844,14 +850,28 @@ button.prev:hover, button.next:hover{
 		line-height:7em;
 	}
 
-	#main button.square span, #main a.button.square span{
-		display:none;
+	#main button.square>span, #main a.button.square>span{
+		color:var(--white);
+		height:80px;
+		padding:0;
+		overflow:hidden;
+		opacity:0;
+	}
+	#main button.square.open>span, #main a.button.square.open>span{
+		opacity:1;
+	}
+	#main button.square.open>span::after, #main a.button.square.open>span::after{
+		width:100%;
+		right:0;
+	}
+	#main button.square:hover>span, #main a.button.square:hover>span {
+		opacity:revert;
 	}
 	#main button.square:after, #main a.button.square:after{
-		opacity:.5;
+		opacity:0;
 	}
 	#main button.square.open:after, #main a.button.square.open:after{
-		opacity:0;
+		opacity:.5;
 	}
 	#main button.square.lightbox:after, #main a.button.square.lightbox:after{
 		opacity:0;
