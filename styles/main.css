@@ -89,8 +89,15 @@ strong {
 
 
 
-
-
+#section-about p a {
+	color:var(--white);
+	font-size:12pt;
+	line-height:16pt;
+	text-decoration:underline;
+}
+#section-about p a:hover {
+	color:#ddd;
+}
 
 
 /* buttons all */
@@ -293,7 +300,7 @@ input[type=button].square.open>span::after, button.square.open>span::after, a.bu
 	transform: translateY(-50%);
 }
 #footer>div{
-	padding-top:2em
+	padding-top:2em;
 }
 #footer>div>div{
 	width:auto;
