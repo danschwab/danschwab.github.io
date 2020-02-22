@@ -275,8 +275,8 @@ input[type=button].square.open>span::after, button.square.open>span::after, a.bu
 	text-align:center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
-	height:calc(100vh - 50px);
+	/*background-attachment: fixed;*/
+	height:calc(100vh - 100px);
 	min-height:250px;
 }
 #header{background-image: url("../media/capstone/capstone04.jpg");background-position:right center;}
@@ -752,6 +752,9 @@ button.prev:hover, button.next:hover{
 
 @media (max-width: 870px) {
 	/*adjust padding */
+	
+	
+	
 	p, h2{
 		padding:0 10%;
 	}
@@ -798,6 +801,8 @@ button.prev:hover, button.next:hover{
 	
 	
 	/*shrink the logo icons, footer, and some other page and general padding */
+
+	
 	#header img {
 		width:60%;
 		/*margin:1em;*/
@@ -821,6 +826,11 @@ button.prev:hover, button.next:hover{
 	}
 	#footer img {
 		height:3em;
+	}
+	
+	
+	#header, #footer {
+		height: calc(100vh - 100px);
 	}
 }
 
@@ -913,6 +923,10 @@ button.prev:hover, button.next:hover{
 	}
 	.slideshow .controls input:first-of-type, .slideshow .controls input:last-of-type{
 		display:inline-block;
+	}
+	
+	#header, #footer {
+		height: 50vh;
 	}
 	
 }
