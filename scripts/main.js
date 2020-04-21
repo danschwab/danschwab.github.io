@@ -3,10 +3,11 @@ $(document).ready(function(){
 	//sets page if page was open
 	if (location.hash != "#"){
 		try {
-			openPage(findButton(location.hash),true);
+			if (location.hash.indexOf("page") >= 0) openPage(findButton(location.hash),true);
+			else openSection(findButton(location.hash),true);
 		}
 		catch(err) {
-			//alert("The page that you had open does not exist.");
+			alert("The tab or page that you had open: "+ location.hash +" does not exist.");
 		}
 	}
 	
@@ -23,6 +24,12 @@ $(document).ready(function(){
 		e.preventDefault();
 		
 		openPage(this);
+	});
+	
+	$(".nav-tab").click(function(e) {
+		e.preventDefault();
+		
+		openSection(this);
 	});
 	
 	$("#main-menu #cover").click(function() {
@@ -133,7 +140,7 @@ function hideIcons(icon) {
 
 
 function scrollBody(id,transition){
-	var offset = $(id).offset().top;
+	let offset = $(id).offset().top;
 	//alert(offset + ":" + $(window).scrollTop());
 	if (transition==0){
 		$('html, body').scrollTop(offset);
@@ -148,6 +155,55 @@ function scrollBody(id,transition){
 	}
 }
 
+
+// this is for section tabs
+
+function openSection(sect){
+	
+	//close open pages
+	$(".open-page").removeClass("open");
+	$(".page").removeClass("open");
+	
+	//if ($(window).scrollTop() > $("#section-navigation").scrollTop()){
+	scrollBody("#section-navigation",400)
+	//}
+	
+	//close all tabs
+	$(".nav-tab").removeClass("open");
+	
+	//open correct tab
+	$(sect).addClass("open");
+	$(findSectionTabAlt(sect)).addClass("open");
+	
+	//close all sections
+	$("section").removeClass("open");
+	
+	//open correct section
+	sect = findSection(sect)
+	$(sect).addClass("open");
+	
+	//set url to include page
+	setPage(sect)
+	
+
+}
+
+function findSectionTabAlt(id){
+	
+	id = ($(id).attr('id'))
+	if (id.indexOf("button2-") >= 0) {
+		id = id.replace("button2-","button-")
+	}
+	else {
+		id = id.replace("button-","button2-")
+	}
+	
+	return "#" + id
+}
+
+
+
+
 //this is for pages
 
 function openPage(page,scrollto){
@@ -159,8 +215,8 @@ function openPage(page,scrollto){
 	}
 	else {
 
-		var pageHeight = 0;
-		var windowPosition = $(window).scrollTop();
+		let pageHeight = 0;
+		let windowPosition = $(window).scrollTop();
 		if ($(".page.open").length > 0){
 			if ($('.page.open').offset().top < windowPosition){
 				pageHeight = $('.page.open').height();
@@ -192,9 +248,9 @@ function openPageButtonThumbnails() {
 
 	$(".open-page").each(function(){
 		if (!($(this).hasClass('no-thumb'))){
-			var path = ($(this).attr('id')).replace("button-","media/thumbs/thumb_");
+			let path = ($(this).attr('id')).replace("button-","media/thumbs/thumb_");
 			path += ".jpg"
-			var html = $(this).html();
+			let html = $(this).html();
 			html = '<img src="' + path + '"/><span>' + html + '</span>';
 			$(this).html(html);
 			//alert($(this).html());
@@ -210,9 +266,20 @@ function findPage(id){
 }
 function findButton(id){
 	id = ($(id).attr('id')).replace("page-","button-")
+	id = id.replace("section-","button-")
 	
 	return "#" + id
 }
+function findSection(id){
+	id = ($(id).attr('id')).replace("button-","section-")
+	id = id.replace("button2-","section-")
+	
+	return "#" + id
+}
+
+
+
+
 
 function loadPageImages(page){
 	var src = "";
