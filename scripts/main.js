@@ -1,15 +1,32 @@
 $(document).ready(function(){
 	
 	//sets page if page was open
-	if (location.hash != "#"){
+	if (location.hash != "#" && location.hash != ""){
 		try {
 			if (location.hash.indexOf("page") >= 0) openPage(findButton(location.hash),true);
 			else openSection(findButton(location.hash),true);
 		}
 		catch(err) {
-			alert("The tab or page that you had open: "+ location.hash +" does not exist.");
+			//alert("The tab or page that you had open: "+ location.hash +" does not exist.");
+			$("section").removeClass("open");
+			$(".nav-tab").removeClass("open");
+			$("section#error-404").addClass("open");
+			location.hash="error-404"
 		}
 	}
+	/*if (window.history && window.history.pushState) {
+
+		window.history.pushState('forward', null, './#forward');
+
+		$(window).on('popstate', function() {
+			alert('Back button was pressed.');
+		});
+
+	}*/
+	
+	
+	
+	
 	
 	$(".slideshow").each(function(){
 		generateSlideshowControls(this.id);

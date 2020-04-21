@@ -63,6 +63,12 @@ p {
 	line-height:1.6em;
 }
 
+hr{
+	padding-top:40px;
+	border: 2px solid transparent;
+    box-shadow: 0 6px 5px -6px #000;
+}
+
 h2{
 	padding:0;
 	font-size: 20pt;
@@ -115,13 +121,14 @@ section>h1{
 	font-weight: 2000;
 	text-align:left;
 	/*border-top: .1em solid var(--white);*/
-	padding: 2em 15% 2em 15%;
+	padding: 0em 15% 0em 15%;
 	margin: 0;
 	width:70%;
 	
 }
 section>div {
-	padding:0 15%;
+	padding:0;
+	margin:auto;
 	width:70%;
 }
 section>div>p {
@@ -204,7 +211,7 @@ section>div>p {
 
 /* buttons all */
 
-input[type=button], button, a.button{margin:0;position:relative;display:inline-block;width:auto;text-decoration:none;color:var(--accent-color);font-weight:600;background-color:var(--white);padding:.5em 3em;}
+input[type=button], button, a.button{margin:0;position:relative;display:inline-block;width:auto;text-decoration:none;color:var(--accent-color);font-weight:600;background-color:var(--white);padding:.8em 3em;}
 input[type=button]:hover, button:hover, a.button:hover{box-shadow: none;transition:box-shadow .2s;}
 input[type=button]:active, button:active, a.button:active, .nav-tab:active{/*box-shadow: 0 0 0 transparent;*/-webkit-tap-highlight-color: rgba(0,0,0,0);}
 .nav-tab:focus{outline:0;}
@@ -262,7 +269,6 @@ input[type=button].square, button.square, a.button.square{
 	padding:0;
 	margin:0;
 	border-radius:0;
-	box-shadow:none;
 	background-color:rgb(246,141,47);background-color:var(--accent-color);
 	background-size: cover;
 	transition:box-shadow .2s, background .1s, opacity .1s, visibility .1s, left .1s, border 0s;
@@ -279,10 +285,10 @@ input[type=button].square>span, button.square>span, a.button.square>span{
 	bottom:0;
 	left:0;
 	right:0;
-	min-height:20%;
+	min-height:35px;
 	z-index:2;
 	text-align:left;
-	padding:1em;
+	padding:10px;
 	opacity:0;
 	background-color:var(--white);/*var(--accent-color);*/
 	color:black;
@@ -305,9 +311,9 @@ input[type=button].square.open>span::after, button.square.open>span::after, a.bu
 	content:"\00D7";
 	text-align:center;
 	opacity:0;
-	font-size:80px;
+	font-size:60px;
 	position:absolute;
-	right:.2em;
+	right:10px;
 	line-height:100%;
 	top:0;
 	bottom:0;
@@ -402,7 +408,10 @@ box-shadow:none;}
 	display:inline-block;
 }
 #footer strong{
-	color:#F26722;
+	color:#fff;/*#F26722;*/
+}
+#footer a{
+	color:#fff;/*#F26722;*/
 }
 
 /* main */
@@ -425,6 +434,7 @@ box-shadow:none;}
 #main input[type=button].circle:hover, #main button.circle:hover, #main a.button.circle:hover{box-shadow:none;}
 
 #main #button-danielschwab {box-shadow:none;}
+#main #button-danielschwab:after {display:none;}
 
 #main button.square, #main a.button.square{
 	display:block;
@@ -467,7 +477,7 @@ box-shadow:none;}
 	border-radius:0;
 	/*background-image: url("../media/icons/close.png");*/
 	background-color:transparent;/*background-color:var(--accent-color);*/
-	box-shadow:inset 1px 1px 8px 0px;
+	box-shadow:inset 1px 1px 8px 0px #000;
 	
 	transition:opacity .5s, background .2s;
 }
@@ -489,7 +499,7 @@ box-shadow:none;}
 	opacity:0;
 }
 .lightbox:after{
-	opacity:0;
+	opacity:.5;
 }
 .lightbox:hover:after{
 	opacity:0;
@@ -526,7 +536,7 @@ box-shadow:none;}
 .page div.column-right, .page div.column-left{background-color: transparent;}
 
 .page {
-	--accent-color:#eee; 
+	--accent-color:var(--white);/*#eee*/ 
 	background-color:var(--white);/*background-color:var(--accent-color);*/
 	top: -3px;
 	max-height:0;
@@ -742,6 +752,7 @@ box-shadow:none;}
 	top:0;
 	bottom:0;
 	border:0;
+	padding:0;
 	outline:0;
 	opacity:0;
 	width:200px;
@@ -788,27 +799,18 @@ button.prev:hover, button.next:hover{
 
 
 
-.pdf-page {
-	background-color:white;
-	display:relative;
-	width:70%;
-	margin:0 15%;
-	padding:0;
-	padding-bottom:90%;/*129%;*/
+
+
+
+@media (min-width: 1200px) {
+	/*adjust page padding */
+	.page.open{
+		padding:50px 50px 75px 50px;
+	}
+	section>div{
+		max-width:850px;
+	}
 }
-.pdf-page>iframe{
-	position:absolute;
-	left:0;
-	right:0;
-	top:0;
-	bottom:0;
-	width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-
-
 
 @media (max-width: 1100px) {
 	/*adjust padding */
@@ -955,7 +957,7 @@ button.prev:hover, button.next:hover{
 
 	#main button.square>span, #main a.button.square>span{
 		color:var(--white);
-		height:80px;
+		height:50px;
 		padding:0;
 		overflow:hidden;
 		opacity:0;
@@ -968,16 +970,16 @@ button.prev:hover, button.next:hover{
 		right:0;
 	}
 	#main button.square:hover>span, #main a.button.square:hover>span {
-		opacity:revert;
+		/*opacity:revert;*/
 	}
 	#main button.square:after, #main a.button.square:after{
-		opacity:0;
+		opacity:.5;
 	}
 	#main button.square.open:after, #main a.button.square.open:after{
 		opacity:.5;
 	}
 	#main button.square.lightbox:after, #main a.button.square.lightbox:after{
-		opacity:0;
+		opacity:.5;
 	}
 	
 	#section-navigation input[type=button].circle, #section-navigation button.circle, #section-navigation a.button.circle{
