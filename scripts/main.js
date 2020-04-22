@@ -1,31 +1,23 @@
 $(document).ready(function(){
-	
 	//sets page if page was open
 	if (location.hash != "#" && location.hash != ""){
-		try {
-			if (location.hash.indexOf("page") >= 0) openPage(findButton(location.hash),true);
-			else openSection(findButton(location.hash),true);
-		}
-		catch(err) {
-			//alert("The tab or page that you had open: "+ location.hash +" does not exist.");
-			$("section").removeClass("open");
-			$(".nav-tab").removeClass("open");
-			$("section#error-404").addClass("open");
-			location.hash="error-404"
-		}
+		locationHashNavigate(location.hash)
 	}
-	/*if (window.history && window.history.pushState) {
-
-		window.history.pushState('forward', null, './#forward');
-
-		$(window).on('popstate', function() {
-			alert('Back button was pressed.');
-		});
-
-	}*/
 	
+	//executes on hash change (aka: browser back button)
+	window.onpopstate = function(event) {
+		let locationHash = location.hash
+		if (locationHash == "#" || locationHash == "") locationHash = "#section-product-design";
+		if (!$(location.hash).hasClass("open")) locationHashNavigate(locationHash);
+	};
 	
+	$(window).on("hashchange", function() {
+		let locationHash = location.hash
+		if (locationHash == "#" || locationHash == "") locationHash = "#section-product-design";
+		if (!$(location.hash).hasClass("open")) locationHashNavigate(locationHash);
+	});
 	
+
 	
 	
 	$(".slideshow").each(function(){
@@ -123,6 +115,27 @@ $(document).ready(function(){
 });
 
 
+
+function locationHashNavigate(locationHash) {
+
+	try {
+		if (locationHash.indexOf("page") >= 0) {
+			openSection("#button-product-design",false,false);
+			openPage(findButton(locationHash),true,false);
+		}
+		else openSection(findButton(locationHash),false,false);
+	}
+	catch(err) {
+		//alert("The tab or page that you had open: "+ location.hash +" does not exist.");
+		$("section").removeClass("open");
+		$(".nav-tab").removeClass("open");
+		$("section#error-404").addClass("open");
+		setHash("error-404")
+	}
+}
+
+
+
 function hideIcons(icon) {
 	if ($(".page.open").length > 0){
 		var iconLoc = $(icon).offset().top;
@@ -175,14 +188,14 @@ function scrollBody(id,transition){
 
 // this is for section tabs
 
-function openSection(sect){
-	
+function openSection(sect, scrollTo=true, setHash=true){
+
 	//close open pages
 	$(".open-page").removeClass("open");
 	$(".page").removeClass("open");
 	
 	//if ($(window).scrollTop() > $("#section-navigation").scrollTop()){
-	scrollBody("#section-navigation",400)
+	if (scrollTo) scrollBody("#section-navigation",400)
 	//}
 	
 	//close all tabs
@@ -200,7 +213,7 @@ function openSection(sect){
 	$(sect).addClass("open");
 	
 	//set url to include page
-	setPage(sect)
+	if (setHash) setPage(sect);
 	
 
 }
@@ -223,12 +236,12 @@ function findSectionTabAlt(id){
 
 //this is for pages
 
-function openPage(page,scrollto){
+function openPage(page,scrollTo=false , setHash=true){
 	if ($(page).hasClass("open")){
 		//scrollBody($(page).prevAll('h1:first'),201);
 		$(".open-page").removeClass("open");
 		$(".page").removeClass("open");
-		setPage("#");
+		if (setHash) setPage("#");
 	}
 	else {
 
@@ -244,18 +257,19 @@ function openPage(page,scrollto){
 		$(".page").removeClass("open");
 		$(".slideshow").each(function(){setSlide(page.id,1);});
 		$(page).addClass("open");
-		$(findPage(page)).addClass("open");
-		setPage(findPage(page));
+		
+		page=findPage(page)
+		
+		$(page).addClass("open");
+		if (setHash) setPage(page);
 		//alert("loc-" + $(window).scrollTop() + " : " + ($(window).scrollTop() - pageHeight))
 		$("html, body").scrollTop(windowPosition - pageHeight,200);
 		loadPageImages(".page.open");
 	}
 	
 	//setAccent();
-	
-	if (scrollto){
-		scrollBody($(header),0);
-		scrollBody($(location.hash),500);
+	if (scrollTo) {
+		scrollBody(page,500)
 	}
 }
 
@@ -311,7 +325,7 @@ function loadPageImages(page){
 
 function setPage(page){
 	if(history.pushState) {
-		history.pushState(null, null, page);
+		history.pushState(page, null, page);
 	}
 	else {
 		location.hash = page;
