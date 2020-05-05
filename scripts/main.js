@@ -130,7 +130,7 @@ function locationHashNavigate(locationHash) {
 		$("section").removeClass("open");
 		$(".nav-tab").removeClass("open");
 		$("section#error-404").addClass("open");
-		setHash("error-404")
+		location.hash="error-404"
 	}
 }
 
