@@ -120,7 +120,9 @@ function locationHashNavigate(locationHash) {
 
 	try {
 		if (locationHash.indexOf("page") >= 0) {
-			openSection("#button-product-design",false,false);
+			try { openSection("#button-product-design",false,false); }
+			catch(err) { openSection("#button-home",false,false); }
+
 			openPage(findButton(locationHash),true,false);
 		}
 		else openSection(findButton(locationHash),false,false);
@@ -279,12 +281,23 @@ function openPageButtonThumbnails() {
 
 	$(".open-page").each(function(){
 		if (!($(this).hasClass('no-thumb'))){
-			let path = ($(this).attr('id')).replace("button-","media/thumbs/thumb_");
+			let path = ""
+			if (!($(this).hasClass('article'))){
+				path = ($(this).attr('id')).replace("button-","media/thumbs/thumb_")
+			}
+			else if (($(this).hasClass('no-cover'))) {
+				path = "media/blog/covers/thumbs/ruins"
+			}
+			else {
+				path = ($(this).attr('id')).replace("button-","media/blog/covers/thumbs/")
+			}
+			
 			path += ".jpg"
 			let html = $(this).html();
 			html = '<img src="' + path + '"/><span>' + html + '</span>';
 			$(this).html(html);
 			//alert($(this).html());
+
 		}
 	});
 	

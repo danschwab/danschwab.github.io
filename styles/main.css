@@ -67,6 +67,10 @@ p {
 	hyphens: auto;
 	line-height:1.6em;
 }
+p.right-align{
+	text-align:right;
+	padding-right:1em;
+}
 
 hr{
 	padding-top:40px;
@@ -324,7 +328,7 @@ input[type=button].square.open>span::after, button.square.open>span::after, a.bu
 	top:0;
 	bottom:0;
 	transition: opacity .2s;
-	color:#F26722;
+	color:var(--accent-color);
 }
 input[type=button].square.open>span::after, button.square.open>span::after, a.button.square.open>span::after{
 	opacity:1;
