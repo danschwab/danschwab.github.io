@@ -1,3 +1,16 @@
+
+	/************************************************
+	*												*
+	*	All following content ©2020 Daniel Schwab	*
+	*	(unless otherwise marked)					*
+	*												*
+	************************************************/
+
+
+// INITIATION FUNCTIONS
+
+
+
 $(document).ready(function(){
 	//sets page if page was open
 	if (location.hash != "#" && location.hash != ""){
@@ -116,6 +129,13 @@ $(document).ready(function(){
 
 
 
+
+
+
+// BROWSER NAVIGATION FUNCTIONS
+
+
+
 function locationHashNavigate(locationHash) {
 
 	try {
@@ -135,6 +155,22 @@ function locationHashNavigate(locationHash) {
 		location.hash="error-404"
 	}
 }
+
+
+function setPage(page){
+	if(history.pushState) {
+		history.pushState(page, null, page);
+	}
+	else {
+		location.hash = page;
+	}
+}
+
+
+
+
+
+// INTERNAL NAVIGATION FUNCTIONS
 
 
 
@@ -277,6 +313,16 @@ function openPage(page,scrollTo=false , setHash=true){
 
 
 
+
+
+
+// DOCUMENT GENERATION AND FUNCTIONALITY
+
+
+
+
+//this is for pages
+
 function openPageButtonThumbnails() {
 
 	$(".open-page").each(function(){
@@ -303,27 +349,6 @@ function openPageButtonThumbnails() {
 	
 }
 
-function findPage(id){
-	id = ($(id).attr('id')).replace("button-","page-")
-	
-	return "#" + id
-}
-function findButton(id){
-	id = ($(id).attr('id')).replace("page-","button-")
-	id = id.replace("section-","button-")
-	
-	return "#" + id
-}
-function findSection(id){
-	id = ($(id).attr('id')).replace("button-","section-")
-	id = id.replace("button2-","section-")
-	
-	return "#" + id
-}
-
-
-
-
 
 function loadPageImages(page){
 	var src = "";
@@ -336,14 +361,9 @@ function loadPageImages(page){
 }
 
 
-function setPage(page){
-	if(history.pushState) {
-		history.pushState(page, null, page);
-	}
-	else {
-		location.hash = page;
-	}
-}
+
+
+
 
 //this is for lightbox elements
 
@@ -381,6 +401,8 @@ function loadLightboxImage() {
 	if (!elem.next().next().next().children('img').attr('src')) elem.next().next().next().children('img').attr('src', elem.next().next().children('img').attr('data-src') + elem.next().next().children('img').attr('data-file'));
 	//alert(elem.prev().prev().children('img').attr('data-src') + elem.prev().prev().children('img').attr('data-file')+"---"+elem.next().next().children('img').attr('data-src') + elem.next().next().children('img').attr('data-file'));
 }
+
+
 //this is for slideshow elements
 
 function plusSlides(id,n) {
@@ -427,4 +449,31 @@ function generateSlideshowControls(id) {
 	
 	$('#' + id).html(controls);
 	setSlide(id,1)
+}
+
+
+
+
+
+
+// UTILITY FUNCTIONS
+
+
+
+function findPage(id){
+	id = ($(id).attr('id')).replace("button-","page-")
+	
+	return "#" + id
+}
+function findButton(id){
+	id = ($(id).attr('id')).replace("page-","button-")
+	id = id.replace("section-","button-")
+	
+	return "#" + id
+}
+function findSection(id){
+	id = ($(id).attr('id')).replace("button-","section-")
+	id = id.replace("button2-","section-")
+	
+	return "#" + id
 }
