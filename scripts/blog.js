@@ -48,19 +48,30 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
             success : function (response) 
 			{
 				tempArticle = response;
-				alert(tempArticle);
+				
 			
 				j = tempArticle.indexOf("/n")
 				tempTitle = $.trim(tempArticle.substring(0, j))
 				tempDate = $.trim(tempArticle.substring(j,tempArticle.indexOf("/n",j+1)))
 				tempArticle = tempArticle.substring(tempArticle.indexOf("/n",j+1),tempArticle.length)
+				
+				alert(tempTitle + " - " + tempDate);
 			}
 		});
 		
 		
+		http.open('HEAD', "media/blog/covers/" + articleArray[i] + ".jpg", false); 
+		http.send(); 
+		if (http.status === 200) { 
+			// Do something now you know the image exists.
+			tempImage="<img data-src='media/blog/covers/" + articleArray[i] + ".jpg' />"
+		} else { 
+			// Image doesn't exist - do something else.
+			tempImage=""
+		} 
 		
+		/*
 		tempImage=""
-		
 		$.get("media/blog/covers/" + articleArray[i] + ".jpg")
 		.done(function() { 
 			// Do something now you know the image exists.
@@ -69,7 +80,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 			// Image doesn't exist - do something else.
 			tempImage=""
 		})
-			
+		*/	
 		
 		
 		//adds articles to temp string
