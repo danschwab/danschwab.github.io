@@ -41,19 +41,26 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 	
 	for (i = firstArticle; i < articleArray.length; i++){
 		//loads article into a variable
-		$.get("media/blog/articles/" + articleArray[i] + ".article", function(response) {
-			tempArticle = response;
-
 		
-			j = tempArticle.indexOf("/n")
-			tempTitle = $.trim(tempArticle.substring(0, j))
-			tempDate = $.trim(tempArticle.substring(j,tempArticle.indexOf("/n",j+1)))
-			tempArticle = tempArticle.substring(tempArticle.indexOf("/n",j+1),tempArticle.length)
-			alert(tempArticle);
+		$.ajax({
+            url : "media/blog/articles/" + articleArray[i] + ".article",
+            dataType: "text",
+            success : function (response) 
+			{
+				tempArticle = response;
+				alert(tempArticle);
 			
+				j = tempArticle.indexOf("/n")
+				tempTitle = $.trim(tempArticle.substring(0, j))
+				tempDate = $.trim(tempArticle.substring(j,tempArticle.indexOf("/n",j+1)))
+				tempArticle = tempArticle.substring(tempArticle.indexOf("/n",j+1),tempArticle.length)
+			}
 		});
 		
+		
+		
 		tempImage=""
+		
 		$.get("media/blog/covers/" + articleArray[i] + ".jpg")
 		.done(function() { 
 			// Do something now you know the image exists.
@@ -73,7 +80,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 		if (tempImage=="") {tempImage="no-cover"}
 		else {tempImage=""}
 		
-		tempButtons = tempButtons.concat("<button class='open-page square article ",tempImage,"' id='button-", articleArray[i], "'>Radically Transformed<br>", tempDate, "</button>")
+		tempButtons = tempButtons.concat("<button class='open-page square article ",tempImage,"' id='button-", articleArray[i], "'>",tempTitle,"<br>", tempDate, "</button>")
 		
 		
 		if (i == lastArticle) break; //stops at last article to show
