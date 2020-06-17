@@ -49,7 +49,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 			tempTitle = $.trim(tempArticle.substring(0, j))
 			tempDate = $.trim(tempArticle.substring(j,tempArticle.indexOf("/n",j+1)))
 			tempArticle = tempArticle.substring(tempArticle.indexOf("/n",j+1),tempArticle.length)
-			alert(tempTitle+" - "+tempDate);
+			alert(tempArticle);
 			
 		});
 		
