@@ -14,7 +14,7 @@
 $(document).ready(function(){
 	
 	$.ajax({
-		url : "media/blog/articles/_article_list.txt",
+		url : "media/blog/articles/article_list.txt",
 		dataType: "text",
 		success : function (response) 
 		{
