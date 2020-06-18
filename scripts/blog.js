@@ -56,7 +56,8 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 				tempArticle = tempArticle.substring(tempArticle.indexOf("\n",j+1),tempArticle.length)
 				
 				alert(tempTitle + " - " + tempDate);
-			}
+			},
+			async: false
 		});
 		
 		$.ajax({
@@ -70,7 +71,8 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 			success: function(){
 				// Do something now you know the image exists.
 				tempImage="<img data-src='media/blog/covers/" + articleArray[i] + ".jpg' />"
-			}
+			},
+			async: false
 		}); 
 		alert(tempImage)
 		
