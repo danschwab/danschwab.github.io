@@ -18,17 +18,14 @@ $(document).ready(function(){
 		dataType: "text",
 		success : function (response) 
 		{
-			const articleList = response.split("\n");
-			insertArticles(0,5,articleList,"#section-home");
+			insertArticles(0,11,response.split("\n"),"#section-home");
 		},
 		async: false
 	});
 	
-	
-	
-	
-	
 });
+
+
 
 
 function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
