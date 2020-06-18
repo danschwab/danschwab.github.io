@@ -13,17 +13,20 @@
 
 $(document).ready(function(){
 	
-	const articleList = [
-		"radicallyTransformed",
-		"whyWrite",
-		"truestFriend",
-		"contentment",
-		"test1",
-		"test2",
-		"test3",
-	]
+	$.ajax({
+		url : "media/blog/article_list.txt",
+		dataType: "text",
+		success : function (response) 
+		{
+			const articleList = response.split("\n");
+			insertArticles(0,5,articleList,"#section-home");
+		},
+		async: false
+	});
 	
-	insertArticles(0,8,articleList,"#section-home");
+	
+	
+	
 	
 });
 
@@ -55,7 +58,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 				tempDate = $.trim(tempArticle.substring(j,tempArticle.indexOf("\n",j+1)))
 				tempArticle = tempArticle.substring(tempArticle.indexOf("\n",j+1),tempArticle.length)
 				
-				alert(tempTitle + " - " + tempDate);
+				//alert(tempTitle + " - " + tempDate);
 			},
 			async: false
 		});
@@ -74,7 +77,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 			},
 			async: false
 		}); 
-		alert(tempImage)
+		//alert(tempImage)
 		
 		/*
 		tempImage=""
