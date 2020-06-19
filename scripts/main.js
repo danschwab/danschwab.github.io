@@ -299,6 +299,7 @@ function openPage(page,scrollTo=false , setHash=true){
 		loadPageImages(".page.open");
 		hideIcons("#page-close"); //added to support mobile page viewing
 		$("html").addClass("article-open"); //added to support mobile immersive page viewer - fixes scroll glitch
+		$(".page.open").scrollTop(0); //added to support mobile immersive page viewer - fixes scroll glitch
 	}
 	
 	//setAccent();
