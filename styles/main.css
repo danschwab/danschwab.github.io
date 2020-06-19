@@ -1062,4 +1062,38 @@ button.prev:hover, button.next:hover{
 		height: 50vh;
 	}
 	
+	
+	
+	
+	/* for blog articles - also uses immersive page viewer */
+	
+	button.square.article, #main a.button.square.article{
+		width:100%;
+	}
+	section>div.article-button-container{
+		max-width: 360px;
+		width:100%
+	}
+	#main button.square.article>span, #main a.button.square.article>span{
+		color:inherit;
+		height:auto;
+		padding:10px;
+		opacity:.8;
+	}
+	.page.open{
+		position: fixed;
+		z-index: 3;
+		overflow: auto;
+		height: calc(100% - 64px);
+		padding: 64px 0 0 0;
+		margin: 0;
+		max-width: 650px;
+		top: 0;
+	}
+
+	html.article-open{
+		overflow:hidden;
+	}
+	
+	
 }

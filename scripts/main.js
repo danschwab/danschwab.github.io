@@ -280,6 +280,7 @@ function openPage(page,scrollTo=false , setHash=true){
 		$(".open-page").removeClass("open");
 		$(".page").removeClass("open");
 		if (setHash) setPage("#");
+		$("html").removeClass("article-open"); //added to support mobile immersive page viewer - fixes scroll glitch
 	}
 	else {
 
@@ -303,6 +304,8 @@ function openPage(page,scrollTo=false , setHash=true){
 		//alert("loc-" + $(window).scrollTop() + " : " + ($(window).scrollTop() - pageHeight))
 		$("html, body").scrollTop(windowPosition - pageHeight,200);
 		loadPageImages(".page.open");
+		hideIcons("#page-close"); //added to support mobile page viewing
+		$("html").addClass("article-open"); //added to support mobile immersive page viewer - fixes scroll glitch
 	}
 	
 	//setAccent();

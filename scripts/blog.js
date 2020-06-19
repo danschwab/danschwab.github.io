@@ -105,7 +105,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 		if ((i+1)%3 == 0)
 		{
 			//merges buttons and articles for one row
-			blogHtml = blogHtml.concat("<div>", tempButtons, "</div>", tempArticles)
+			blogHtml = blogHtml.concat("<div class='article-button-container'>", tempButtons, "</div>", tempArticles)
 			//clears temp strings
 			tempButtons = ""
 			tempArticles = ""
