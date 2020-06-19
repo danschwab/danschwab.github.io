@@ -60,7 +60,7 @@ div{
 	margin:0;
 }
 
-p {
+p, ul {
 	width:auto;
 	padding:0;
 	text-align:left;
@@ -622,7 +622,7 @@ input[type=button].square.open.article>span, button.square.open.article>span, a.
 	overflow:hidden;
 }
 
-.page div p{
+.page div p, .page div ul{
 	color:black;
 }
 
