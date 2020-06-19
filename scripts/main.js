@@ -38,7 +38,6 @@ $(document).ready(function(){
     });
 	$(".lightbox").each(function(){
 		generateLightbox(this);
-		$("#page-close").addClass("hidden");
     });
 	
 	openPageButtonThumbnails();
@@ -390,6 +389,7 @@ function generateLightbox(elem) {
 	$(elem).click(function() {
 		$(this).addClass('open');
 		loadLightboxImage();
+		$("#page-close").addClass("hidden");
 	});
 }
 
