@@ -1067,7 +1067,7 @@ button.prev:hover, button.next:hover{
 	
 	/* for blog articles - also uses immersive page viewer */
 	
-	button.square.article, #main a.button.square.article{
+	#main button.square.article, #main a.button.square.article{
 		width:100%;
 	}
 	section>div.article-button-container{
@@ -1080,6 +1080,7 @@ button.prev:hover, button.next:hover{
 		padding:10px;
 		opacity:.8;
 	}
+	
 	.page.open{
 		position: fixed;
 		z-index: 3;

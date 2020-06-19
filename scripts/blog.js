@@ -114,7 +114,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 	}
 	
 	//merges last buttons and articles for last row
-	blogHtml = blogHtml.concat("<div>", tempButtons, "</div>", tempArticles)
+	blogHtml = blogHtml.concat("<div class='article-button-container'>", tempButtons, "</div>", tempArticles)
 	
 	$(intoElement).html(blogHtml);
 }

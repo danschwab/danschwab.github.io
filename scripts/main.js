@@ -64,12 +64,7 @@ $(document).ready(function(){
 	
 	
 	$("#page-close").click(function() {
-		scrollBody($('.page.open'),0);
-		scrollBody($('.open-page.open'),200);
-		//scrollBody($('.page.open').prevAll('h1:first'),500);
-		$(".open-page").removeClass("open");
-		$(".page").removeClass("open");
-		setPage("#");
+		closePage(true);
 	});
 	
 	
@@ -276,11 +271,7 @@ function findSectionTabAlt(id){
 
 function openPage(page,scrollTo=false , setHash=true){
 	if ($(page).hasClass("open")){
-		//scrollBody($(page).prevAll('h1:first'),201);
-		$(".open-page").removeClass("open");
-		$(".page").removeClass("open");
-		if (setHash) setPage("#");
-		$("html").removeClass("article-open"); //added to support mobile immersive page viewer - fixes scroll glitch
+		closePage();
 	}
 	else {
 
@@ -312,6 +303,20 @@ function openPage(page,scrollTo=false , setHash=true){
 	if (scrollTo) {
 		scrollBody(page,500)
 	}
+}
+
+
+function closePage(scroll = false){
+	if (scroll){
+		scrollBody($('.page.open'),0);
+		scrollBody($('.open-page.open'),200);
+	}
+	//scrollBody($('.page.open').prevAll('h1:first'),500);
+	$(".open-page").removeClass("open");
+	$(".page").removeClass("open");
+	setPage("#");
+	$("html").removeClass("article-open");
+	hideIcons("#page-close");
 }
 
 
