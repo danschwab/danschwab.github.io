@@ -38,7 +38,7 @@ $(document).ready(function(){
     });
 	$(".lightbox").each(function(){
 		generateLightbox(this);
-		$(icon).addClass("hidden");
+		$("#page-close").addClass("hidden");
     });
 	
 	openPageButtonThumbnails();
@@ -293,13 +293,13 @@ function openPage(page,scrollTo=false , setHash=true){
 		page=findPage(page)
 		
 		$(page).addClass("open");
+		$(".page.open").scrollTop(0); //added to support mobile immersive page viewer - fixes scroll glitch
 		if (setHash) setPage(page);
 		//alert("loc-" + $(window).scrollTop() + " : " + ($(window).scrollTop() - pageHeight))
 		$("html, body").scrollTop(windowPosition - pageHeight,200);
 		loadPageImages(".page.open");
 		hideIcons("#page-close"); //added to support mobile page viewing
 		$("html").addClass("article-open"); //added to support mobile immersive page viewer - fixes scroll glitch
-		$(".page.open").scrollTop(0); //added to support mobile immersive page viewer - fixes scroll glitch
 	}
 	
 	//setAccent();
