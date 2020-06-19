@@ -380,10 +380,10 @@ function loadPageImages(page){
 
 function generateLightbox(elem) {
 	//alert("<div onclick='$(" + elem + ").removeClass("+'"open"'+")'></div><img onclick='$(" + elem + ").removeClass("+'"open"'+")'/>");
-	var content = "<div><div onclick='$("+'".lightbox.open"'+").removeClass("+'"open"'+")'></div><img />"
+	var content = "<div><div onclick='closeLightbox()'></div><img />"
 	if ($(elem).prev().prev('.lightbox').length) content += "<button class='prev' onclick='prevLightBox()' ></button>";
 	if ($(elem).next('.lightbox').length) content += "<button class='next' onclick='nextLightBox()' ></button>";
-	content += "<button class='close' onclick='$("+'".lightbox.open"'+").removeClass("+'"open"'+")' ></button>";
+	content += "<button class='close' onclick='closeLightbox()' ></button>";
 	content += "</div>";
 	$(elem).after(content);
 	
@@ -391,6 +391,11 @@ function generateLightbox(elem) {
 		$(this).addClass('open');
 		loadLightboxImage();
 	});
+}
+
+function closeLightbox(){
+	$(".lightbox.open").removeClass("open")
+	hideIcons("#page-close")
 }
 
 function nextLightBox() {
