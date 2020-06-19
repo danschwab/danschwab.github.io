@@ -38,6 +38,7 @@ $(document).ready(function(){
     });
 	$(".lightbox").each(function(){
 		generateLightbox(this);
+		$(icon).addClass("hidden");
     });
 	
 	openPageButtonThumbnails();
@@ -96,6 +97,7 @@ $(document).ready(function(){
 			
 			if ($(".lightbox.open")[0]){
 				$(".lightbox.open").removeClass('open');
+				hideIcons("#page-close");
 			} else if ($(".open-page.open")[0]){
 				scrollBody($('.page.open'),0);
 				scrollBody($('.open-page.open'),200);
