@@ -1067,6 +1067,15 @@ button.prev:hover, button.next:hover{
 	
 	/* for blog articles - also uses immersive page viewer */
 	
+	#header h1{
+		font-size:36px;
+		padding: 1em 30px 0 30px;
+	}
+	#header h2{
+		padding: 1em 30px 0 30px;
+	}
+	
+	
 	#main button.square.article, #main a.button.square.article{
 		width:100%;
 	}
