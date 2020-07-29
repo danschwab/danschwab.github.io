@@ -20,13 +20,13 @@ $(document).ready(function(){
 	//executes on hash change (aka: browser back button)
 	window.onpopstate = function(event) {
 		let locationHash = location.hash
-		if (locationHash == "#" || locationHash == "") locationHash = "#section-product-design";
+		if (locationHash == "#" || locationHash == "") locationHash = "#section-home";
 		if (!$(location.hash).hasClass("open")) locationHashNavigate(locationHash);
 	};
 	
 	$(window).on("hashchange", function() {
 		let locationHash = location.hash
-		if (locationHash == "#" || locationHash == "") locationHash = "#section-product-design";
+		if (locationHash == "#" || locationHash == "") locationHash = "#section-home";
 		if (!$(location.hash).hasClass("open")) locationHashNavigate(locationHash);
 	});
 	

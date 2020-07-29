@@ -12,6 +12,7 @@
 
 
 $(document).ready(function(){
+
 	
 	$.ajax({
 		url : "media/blog/articles/article_list.txt",
