@@ -1092,7 +1092,7 @@ button.prev:hover, button.next:hover{
 		color:inherit;
 		height:auto;
 		padding:10px;
-		/*opacity:.8;*/
+		opacity:1;
 	}
 	
 	.page.open{
