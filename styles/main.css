@@ -235,6 +235,7 @@ button img, a.button img{
 	left:0;
 	top:0;
 	transition: left 1s, top 1s, width 1s;
+	object-fit: cover;
 }
 
 
@@ -364,15 +365,19 @@ box-shadow:none;}
 /* blog buttons */
 
 #main button.square.article, #main a.button.square.article{
-	padding-top:110px;
+	padding-top:160px;
 }
 input[type=button].square.article>span, button.square.article>span, a.button.square.article>span{
-	opacity:.8;
+	opacity:1;
+	box-shadow: inset 1px -4px 4px -4px #000;
 }
 input[type=button].square.open.article>span, button.square.open.article>span, a.button.square.open.article>span{
 	opacity:1;
+	box-shadow: none;
 }
-
+#main button.square.article img, #main a.button.square.article img{
+	height:106px;
+}
 
 /* wrapper */
 
@@ -1087,7 +1092,7 @@ button.prev:hover, button.next:hover{
 		color:inherit;
 		height:auto;
 		padding:10px;
-		opacity:.8;
+		/*opacity:.8;*/
 	}
 	
 	.page.open{
