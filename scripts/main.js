@@ -319,6 +319,7 @@ function closePage(scroll = false){
 	setPage("#");
 	$("html").removeClass("article-open");
 	hideIcons("#page-close");
+	$( ".comment-button" ).removeClass("hidden")
 }
 
 
