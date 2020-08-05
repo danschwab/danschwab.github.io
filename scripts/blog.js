@@ -92,7 +92,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 		
 		//adds articles to temp string
 		
-		tempArticles = tempArticles.concat("<div class='page' id='page-", articleArray[i], "'>",tempImage,"<div><h2>",tempTitle,"</h2>",tempArticle,"<p class='right-align'> <em>Published ",tempDate,"</em></p><p><a class='button shadow' href='mailto:dschwabdesign@gmail.com'>send comment</a></p class='comment-area'><p><form action='http://formspree.io/dschwabdesign@gmail.com' method='post'><input type='hidden' name='_article' value='",tempTitle,"'>Email<input type='email' name='_replyto'><br> Name<input type='text' name='_name'><br>Comment <br><textarea name='body'>	</textarea><input class='button shadow' type='submit' value='Send'><input class='button shadow cancel-button' type='button' value='Cancel'></form></p></div></div>")
+		tempArticles = tempArticles.concat("<div class='page' id='page-", articleArray[i], "'>",tempImage,"<div><h2>",tempTitle,"</h2>",tempArticle,"<p class='right-align'> <em>Published ",tempDate,"</em></p><a class='button shadow comment-button' href='mailto:dschwabdesign@gmail.com'>send comment</a><form class='comment-area' action='http://formspree.io/dschwabdesign@gmail.com' method='post'><input type='hidden' name='_article' value='",tempTitle,"'>Email<input type='email' name='_replyto'><br> Name<input type='text' name='_name'><br>Comment <br><textarea name='body'>	</textarea><input class='button shadow' type='submit' value='Send'><input class='button shadow cancel-button' type='button' value='Cancel'></form></div></div>")
 		
 		//adds button to temp string
 		if (tempImage=="") {tempImage="no-cover"}
