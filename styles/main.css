@@ -854,11 +854,15 @@ button.prev:hover, button.next:hover{
 
 
 /* currently only used in comment form for blog */
+.comment-button{
+	margin-bottom:1em;
+}
 
 .comment-area{
 	height:0;
 	overflow:hidden;
 	width:100%;
+	box-sizing: border-box;
 }
 .hidden + form.comment-area{
 	height:auto;
@@ -882,6 +886,7 @@ textarea {
 	color:white;
 	background-color:#f22323;
 	margin-right:1em;
+	margin-bottom:1em;
 	border:0;
 }
 .comment-area input[type=submit]{
@@ -889,6 +894,7 @@ textarea {
 	color:white;
 	background-color:#f26923;
 	margin-right:1em;
+	margin-bottom:1em;
 	border:0;
 }
 
