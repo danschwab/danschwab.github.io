@@ -220,9 +220,9 @@ section>div>p {
 
 /* buttons all */
 
-input[type=button], button, a.button{margin:0;position:relative;display:inline-block;width:auto;text-decoration:none;color:var(--accent-color);font-weight:600;background-color:var(--white);padding:.8em 3em;}
-input[type=button]:hover, button:hover, a.button:hover{box-shadow: none;transition:box-shadow .2s;}
-input[type=button]:active, button:active, a.button:active, .nav-tab:active{/*box-shadow: 0 0 0 transparent;*/-webkit-tap-highlight-color: rgba(0,0,0,0);}
+input[type=button], input[type=submit], button, a.button{margin:0;position:relative;display:inline-block;width:auto;text-decoration:none;color:var(--accent-color);font-weight:600;background-color:var(--white);padding:.8em 3em;}
+input[type=button]:hover, input[type=submit]:hover, button:hover, a.button:hover{box-shadow: none;transition:box-shadow .2s;}
+input[type=button]:active, input[type=submit]:active, button:active, a.button:active, .nav-tab:active{/*box-shadow: 0 0 0 transparent;*/-webkit-tap-highlight-color: rgba(0,0,0,0);}
 .nav-tab:focus{outline:0;}
 .hidden{
 	visibility:hidden;
@@ -586,7 +586,7 @@ input[type=button].square.open.article>span, button.square.open.article>span, a.
 .page div.column-right, .page div.column-left{background-color: transparent;}
 
 .page {
-	--accent-color:var(--white);/*#eee*/ 
+	/*--accent-color:var(--white);/*#eee*/ 
 	background-color:var(--white);/*background-color:var(--accent-color);*/
 	top: -3px;
 	max-height:0;
@@ -627,7 +627,7 @@ input[type=button].square.open.article>span, button.square.open.article>span, a.
 	overflow:hidden;
 }
 
-.page div p, .page div ul{
+.page div p, .page div ul, , .page div ol{
 	color:black;
 }
 
@@ -849,6 +849,33 @@ button.prev:hover, button.next:hover{
 
 
 
+/* currently only used in comment form for blog */
+
+.comment-area{
+	height:0;
+	transition: height .2s;
+}
+.hidden>.comment-area{
+	height:auto;
+}
+
+
+input[type=text], input[type=email], textarea {
+	width:100%;
+	box-sizing: border-box;
+	
+}
+textarea {
+	height:2em;
+}
+
+
+.comment-area input[type=button].cancel-button{
+	--accent-color: #f22323;
+}
+.comment-area input[type=submit]{
+	--accent-color: #f26923;
+}
 
 
 
