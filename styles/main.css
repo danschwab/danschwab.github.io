@@ -73,6 +73,7 @@ p.right-align{
 }
 input[type=button].right-align,input[type=submit].right-align, input[type=reset].right-align, a.button.right-align{
 	float:right;
+	margin-right:1em
 }
 
 hr{
@@ -223,7 +224,7 @@ section>div>p, section>div>form {
 
 /* buttons all */
 
-input[type=button], input[type=submit], input[type=reset], button, a.button{margin:0;position:relative;display:inline-block;width:auto;text-decoration:none;color:var(--accent-color);font-weight:600;background-color:var(--white);padding:.8em 3em;font: 12pt mainFont, sans-serif;}
+input[type=button], input[type=submit], input[type=reset], button, a.button{margin:0;position:relative;display:inline-block;width:auto;text-decoration:none;color:var(--accent-color);font-weight:600;background-color:var(--white);padding:.8em 3em;font: 12pt mainFont, sans-serif;border:0;}
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, button:hover, a.button:hover{box-shadow: none;transition:box-shadow .2s;}
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active, button:active, a.button:active, .nav-tab:active{/*box-shadow: 0 0 0 transparent;*/-webkit-tap-highlight-color: rgba(0,0,0,0);}
 .nav-tab:focus{outline:0;}
@@ -856,12 +857,12 @@ button.prev:hover, button.next:hover{
 /* currently only used in comment form for blog */
 
 .comment-area{
-	max-height:0;
-	transition: max-height .5s;
+	height:0;
 	overflow:hidden;
+	width:100%;
 }
 .hidden + form.comment-area{
-	max-height:300px;
+	height:auto;
 	overflow:visible;
 }
 
