@@ -854,8 +854,11 @@ button.prev:hover, button.next:hover{
 
 
 /* currently only used in comment form for blog */
-.comment-button{
+input[type=button].comment-button{
 	margin-bottom:1em;
+}
+input[type=button].comment-button.hidden{
+	display:none;
 }
 
 .comment-area{
