@@ -612,7 +612,6 @@ input[type=button].square.open.article>span, button.square.open.article>span, a.
 	padding:50px 15% 75px 15%;
 	/*transition: padding .5s, max-height .5s cubic-bezier(1,0,1,0);*/
 	margin-bottom: 30px;
-	overflow:visible;
 }
 
 .padding{
