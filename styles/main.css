@@ -590,7 +590,7 @@ input[type=button].square.open.article>span, button.square.open.article>span, a.
 	background-color:var(--white);/*background-color:var(--accent-color);*/
 	top: -3px;
 	max-height:0;
-	overflow:hidden;
+	overflow:visible;
 	transition:max-height 0;/*transition:max-height .5s cubic-bezier(0,1,0,1);*/
 	/*transition: padding .5s, max-height .25s cubic-bezier(0,1,0,1);*/
 }
@@ -855,8 +855,9 @@ button.prev:hover, button.next:hover{
 	max-height:0;
 	padding:0;
 	transition: max-height .5s, padding .5s;
+	overflow:hidden;
 }
-.hidden > .comment-area{
+.hidden + form.comment-area{
 	max-height:300px;
 	padding:1em 0;
 }
