@@ -92,7 +92,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 		
 		//adds articles to temp string
 		
-		tempArticles = tempArticles.concat("<div class='page' id='page-", articleArray[i], "'>",tempImage,"<div><h2>",tempTitle,"</h2>",tempArticle,"<p class='right-align'> <em>Published ",tempDate,"</em></p><a class='right-align button shadow comment-button' href='mailto:dschwabdesign@gmail.com'>send comment</a><form class='comment-area' action='http://formspree.io/dschwabdesign@gmail.com' method='post'><input type='hidden' name='_article' value='",tempTitle,"'>Email<input type='email' name='_replyto'><br> Name<input type='text' name='_name'><br>Comment <br><textarea name='body'>	</textarea><input class='button shadow' type='submit' value='Send'><input class='button shadow cancel-button' type='button' value='Cancel'></form></div></div>")
+		tempArticles = tempArticles.concat("<div class='page' id='page-", articleArray[i], "'>",tempImage,"<div><h2>",tempTitle,"</h2>",tempArticle,"<p class='right-align'> <em>Published ",tempDate,"</em></p><input type='button' class='right-align button shadow comment-button' value='send comment'><form class='comment-area' action='http://formspree.io/dschwabdesign@gmail.com' method='post'><input type='hidden' name='_article' value='",tempTitle,"'>Email<input type='email' name='_replyto'><br> Name<input type='text' name='_name'><br>Comment <br><textarea name='body'></textarea><input class='button shadow' type='submit' value='Send'><input class='button shadow comment-cancel-button' type='reset' value='Cancel'></form></div></div>")
 		
 		//adds button to temp string
 		if (tempImage=="") {tempImage="no-cover"}
@@ -118,4 +118,22 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 	blogHtml = blogHtml.concat("<div class='article-button-container'>", tempButtons, "</div>", tempArticles)
 	
 	$(intoElement).html(blogHtml);
+	
+	
+	
+	//sets up button events
+	
+	
+	$( ".comment-button" ).click(function() {
+		$(this).addClass("hidden")
+	});
+	
+	$( ".comment-area input[type=submit]" ).click(function() {
+		$( ".comment-button" ).removeClass("hidden")
+	});
+	
+	$( ".comment-area input[type=reset]" ).click(function() {
+		$( ".comment-button" ).removeClass("hidden")
+		
+	});
 }
