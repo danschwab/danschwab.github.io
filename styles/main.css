@@ -646,7 +646,7 @@ input[type=button].square.open.article>span, button.square.open.article>span, a.
 /* lightboxes */
 
 .lightbox {
-	border-color:white;
+	--accent-color: var(--white);
 }
 
 
