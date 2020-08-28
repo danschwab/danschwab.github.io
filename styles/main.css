@@ -77,7 +77,7 @@ input[type=button].right-align,input[type=submit].right-align, input[type=reset]
 }
 
 hr{
-	padding-top:40px;
+	padding-top:20px;
 	border: 2px solid transparent;
     box-shadow: 0 6px 5px -6px #000;
 }
