@@ -100,7 +100,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 			success: function(comment){
 				// Do something now you know the comment exists.
 				tempComment = comment;
-				alert(tempComment);
+				
 			},
 			async: false
 		}); 
