@@ -19,14 +19,12 @@ $(document).ready(function(){
 		dataType: "text",
 		success : function (response) 
 		{
-			insertArticles(0,11,response.split("\n"),"#section-home");
+			insertArticles(0,100,response.split("\n"),"#section-home");
 		},
 		async: false
 	});
 	
 });
-
-
 
 
 function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
@@ -35,6 +33,7 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 	let tempDate = ""
 	let tempTitle = ""
 	let tempImage = ""
+	let tempComment = ""
 	let tempButtons = ""
 	let tempArticles = ""
 	let blogHtml = ""
@@ -90,9 +89,25 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 		*/	
 		
 		
+		
+		//loads comments to variable
+		$.ajax({
+			url:'media/blog/comments/' + articleArray[i] + '.comments',
+			dataType: "text",
+			error: function(){
+				//nothing
+			},
+			success: function(comment){
+				// Do something now you know the comment exists.
+				tempComment = comment;
+			},
+			async: false
+		}); 
+		
 		//adds articles to temp string
 		
-		tempArticles = tempArticles.concat("<div class='page' id='page-", articleArray[i], "'>",tempImage,"<div><h2>",tempTitle,"</h2>",tempArticle,"<p class='right-align'> <em>Published ",tempDate,"</em></p><input type='button' class='right-align button shadow comment-button' value='send comment'><form class='comment-area' action='https://formspree.io/dschwabdesign@gmail.com' method='POST'><input type='hidden' name='_article' value='",tempTitle,"'>Email<input type='email' name='_replyto'><br> Name<input type='text' name='_name'><br>Comment <br><textarea name='body'></textarea><input class='button shadow' type='submit' value='Send'><input class='button shadow comment-cancel-button' type='reset' value='Cancel'></form></div></div>")
+		tempArticles = tempArticles.concat("<div class='page' id='page-", articleArray[i], "'>",tempImage,"<div><h2>",tempTitle,"</h2>",tempArticle,"<p class='right-align'> <em>Published ",tempDate,"</em></p><input type='button' class='right-align button shadow comment-button' value='send comment'><form class='comment-area' action='https://formspree.io/dschwabdesign@gmail.com' method='POST'><input type='hidden' name='_article' value='",tempTitle,"'>Email<input type='email' name='_replyto'><br> Name<input type='text' name='_name'><br>Comment <br><textarea name='body'></textarea><input class='button shadow' type='submit' value='Send'><input class='button shadow comment-cancel-button' type='reset' value='Cancel'></form>",tempComment,"</div></div>")
+		
 		
 		//adds button to temp string
 		if (tempImage=="") {tempImage="no-cover"}
