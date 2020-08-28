@@ -95,11 +95,12 @@ function insertArticles(firstArticle,lastArticle,articleArray,intoElement) {
 			url:'media/blog/comments/' + articleArray[i] + '.comments',
 			dataType: "text",
 			error: function(){
-				//nothing
+				tempComment = "";
 			},
 			success: function(comment){
 				// Do something now you know the comment exists.
 				tempComment = comment;
+				alert(tempComment);
 			},
 			async: false
 		}); 
