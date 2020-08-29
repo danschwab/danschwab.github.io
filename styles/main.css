@@ -960,7 +960,7 @@ img.comment-avatar{
 	
 	
 	
-	p, h2, form{
+	p, h2, section>div>ul, section>div>ol, form{
 		padding:0 10%;
 	}
 	
@@ -1057,7 +1057,7 @@ img.comment-avatar{
 		display:none;
 	}
 	
-	section>div>p, section>div>h2, section>div>form{
+	section>div>p, section>div>ul, section>div>ol, section>div>h2, section>div>form{
 		padding:0 16px;
 	}
 	
