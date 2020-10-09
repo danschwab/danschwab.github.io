@@ -2,4 +2,4 @@
 # suphp_configpath /home/yourusername/path/to/php.ini
 
 DirectoryIndex index.html
-ErrorDocument index.html/#error-404
+ErrorDocument index.html#error-404
