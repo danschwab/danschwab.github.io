@@ -22,12 +22,14 @@ $(document).ready(function(){
 		let locationHash = location.hash
 		if (locationHash == "#" || locationHash == "") locationHash = "#section-home";
 		if (!$(location.hash).hasClass("open")) locationHashNavigate(locationHash);
+		hideIcons("#page-close");
 	};
 	
 	$(window).on("hashchange", function() {
 		let locationHash = location.hash
 		if (locationHash == "#" || locationHash == "") locationHash = "#section-home";
 		if (!$(location.hash).hasClass("open")) locationHashNavigate(locationHash);
+		hideIcons("#page-close");
 	});
 	
 
@@ -46,6 +48,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		
 		openPage(this);
+		hideIcons("#page-close");
 	});
 	
 	$(".nav-tab").click(function(e) {
@@ -83,10 +86,13 @@ $(document).ready(function(){
 		
 		//this accomplishes the color shifting of the pages
 		
-		if ($(window).width() < 1100) $("#main-menu-open").removeClass('open'); //CHANGED 12/25/17
+		if ($(window).outerWidth() < 1100) $("#main-menu-open").removeClass('open'); //CHANGED 12/25/17
 		//setAccent();
 	});
 	
+	addEventListener('resize', function() {
+		hideIcons("#page-close");
+	});
 	
 	
 	//KEY LISTENER
@@ -172,27 +178,35 @@ function setPage(page){
 
 function hideIcons(icon) {
 	if ($(".page.open").length > 0){
-		var iconLoc = $(icon).offset().top;
-		var pageTop = $(".page.open").offset().top;
-		var pageBottom = $(".page.open").height() + (pageTop - $(icon).height());
-		
-		//alert(pageTop + " : icon-" + iconLoc + " : " + pageBottom);
-		
-		/*if ($(window).scrollTop() > pageBottom){
-			scrollBody($('.page.open'),1000);
-			$(".open-page").removeClass("open");
-			$(".page").removeClass("open");
-			setPage("#");
-		}*/
-		
-		
-		if ((iconLoc < pageTop) || (iconLoc > pageBottom)) {
-			$(icon).addClass("hidden");
-		}
-		else {
+		if ($(window).outerWidth() < 650) {
 			$(icon).removeClass("hidden");
 			$(".edge-button").css('--accent-color',$(".open-page.open").css('--accent-color')); 
-			//alert($(".open-page.open").css('--accent-color'));
+		}
+		else {
+		
+		
+			var iconLoc = $(icon).offset().top;
+			var pageTop = $(".page.open").offset().top;
+			var pageBottom = $(".page.open").height() + (pageTop - $(icon).height());
+			
+			//alert(pageTop + " : icon-" + iconLoc + " : " + pageBottom);
+			
+			/*if ($(window).scrollTop() > pageBottom){
+				scrollBody($('.page.open'),1000);
+				$(".open-page").removeClass("open");
+				$(".page").removeClass("open");
+				setPage("#");
+			}*/
+			
+			
+			if ((iconLoc < pageTop) || (iconLoc > pageBottom)) {
+				$(icon).addClass("hidden");
+			}
+			else {
+				$(icon).removeClass("hidden");
+				$(".edge-button").css('--accent-color',$(".open-page.open").css('--accent-color')); 
+				//alert($(".open-page.open").css('--accent-color'));
+			}
 		}
 	}
 	else {
@@ -456,13 +470,16 @@ function generateSlideshowControls(id) {
 	//alert(idq);
 	
 	var num = countSlides(id);
-	var controls = "<div class='controls'><input type='button' value=' ' onclick='plusSlides(" + idq + ",-1)' />";
+	var controls = ""
+	
+	controls += "<div>" + $('#' + id).html() + "<button class='prev' onclick='plusSlides(" + idq + ",-1)' >" +
+			"</button><button class='next' onclick='plusSlides(" + idq + ",1)' ></button></div>";
+		
+	controls += "<div class='controls'><input type='button' value=' ' onclick='plusSlides(" + idq + ",-1)' />";
 	for (i = 0; i < num; i++) {
 		controls += "<input value='" + (i+1) + "' type='button' onclick='setSlide(" + idq + "," + (i+1) + ")' />";
 	}
-	controls += "<input type='button' value=' ' onclick='plusSlides(" + idq + ",1)' /></div>" +
-			"<div>" + $('#' + id).html() + "<button class='prev' onclick='plusSlides(" + idq + ",-1)' >" +
-			"</button><button class='next' onclick='plusSlides(" + idq + ",1)' ></button></div>";
+	controls += "<input type='button' value=' ' onclick='plusSlides(" + idq + ",1)' /></div>";
 	
 	$('#' + id).html(controls);
 	setSlide(id,1)
